@@ -1,0 +1,1 @@
+C:\Project_New\Source Code\rsservice_cluster\bin\Debug\rsservice_cluster.exe.config

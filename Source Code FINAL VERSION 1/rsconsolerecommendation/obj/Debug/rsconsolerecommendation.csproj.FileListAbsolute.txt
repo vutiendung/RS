@@ -1,0 +1,6 @@
+C:\Project_New\Source Code\rsconsolerecommendation\bin\Debug\rsconsolerecommendation.exe
+C:\Project_New\Source Code\rsconsolerecommendation\bin\Debug\rsconsolerecommendation.pdb
+C:\Project_New\Source Code\rsconsolerecommendation\obj\Debug\rsconsolerecommendation.Properties.Resources.resources
+C:\Project_New\Source Code\rsconsolerecommendation\obj\Debug\rsconsolerecommendation.csproj.GenerateResource.Cache
+C:\Project_New\Source Code\rsconsolerecommendation\obj\Debug\rsconsolerecommendation.exe
+C:\Project_New\Source Code\rsconsolerecommendation\obj\Debug\rsconsolerecommendation.pdb

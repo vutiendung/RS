@@ -1,0 +1,6 @@
+C:\Project_New\Source Code\consoledataintergration\bin\Debug\consoledataintergration.exe
+C:\Project_New\Source Code\consoledataintergration\bin\Debug\consoledataintergration.pdb
+C:\Project_New\Source Code\consoledataintergration\obj\Debug\consoledataintergration.Properties.Resources.resources
+C:\Project_New\Source Code\consoledataintergration\obj\Debug\consoledataintergration.csproj.GenerateResource.Cache
+C:\Project_New\Source Code\consoledataintergration\obj\Debug\consoledataintergration.exe
+C:\Project_New\Source Code\consoledataintergration\obj\Debug\consoledataintergration.pdb

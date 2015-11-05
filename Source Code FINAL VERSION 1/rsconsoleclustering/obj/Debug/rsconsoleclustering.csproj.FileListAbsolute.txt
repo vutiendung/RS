@@ -1,0 +1,6 @@
+C:\Project_New\Source Code\rsconsoleclustering\bin\Debug\rsconsoleclustering.exe
+C:\Project_New\Source Code\rsconsoleclustering\bin\Debug\rsconsoleclustering.pdb
+C:\Project_New\Source Code\rsconsoleclustering\obj\Debug\rsconsoleclustering.Properties.Resources.resources
+C:\Project_New\Source Code\rsconsoleclustering\obj\Debug\rsconsoleclustering.csproj.GenerateResource.Cache
+C:\Project_New\Source Code\rsconsoleclustering\obj\Debug\rsconsoleclustering.exe
+C:\Project_New\Source Code\rsconsoleclustering\obj\Debug\rsconsoleclustering.pdb

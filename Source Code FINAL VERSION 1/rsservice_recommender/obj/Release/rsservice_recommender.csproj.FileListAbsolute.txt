@@ -1,0 +1,92 @@
+C:\Source Code\rsservice_recommender\bin\Release\rsservice_recommender.exe.config
+C:\Source Code\rsservice_recommender\bin\Release\rsservice_recommender.exe
+C:\Source Code\rsservice_recommender\bin\Release\rsservice_recommender.pdb
+C:\Source Code\rsservice_recommender\bin\Release\dataintergration_lib.dll
+C:\Source Code\rsservice_recommender\bin\Release\rsglobal_lib.dll
+C:\Source Code\rsservice_recommender\bin\Release\rsrecommendation_lib.dll
+C:\Source Code\rsservice_recommender\bin\Release\rsbo_lib.dll
+C:\Source Code\rsservice_recommender\bin\Release\rsdao_lib.dll
+C:\Source Code\rsservice_recommender\bin\Release\rsclustering_lib.dll
+C:\Source Code\rsservice_recommender\bin\Release\algorithm_lib.dll
+C:\Source Code\rsservice_recommender\bin\Release\dataintergration_lib.pdb
+C:\Source Code\rsservice_recommender\bin\Release\rsglobal_lib.pdb
+C:\Source Code\rsservice_recommender\bin\Release\rsrecommendation_lib.pdb
+C:\Source Code\rsservice_recommender\bin\Release\rsbo_lib.pdb
+C:\Source Code\rsservice_recommender\bin\Release\rsdao_lib.pdb
+C:\Source Code\rsservice_recommender\bin\Release\rsclustering_lib.pdb
+C:\Source Code\rsservice_recommender\bin\Release\algorithm_lib.pdb
+C:\Source Code\rsservice_recommender\obj\Release\rsservice_recommender.csprojResolveAssemblyReference.cache
+C:\Source Code\rsservice_recommender\obj\Release\rsservice_recommender.Properties.Resources.resources
+C:\Source Code\rsservice_recommender\obj\Release\rsservice_recommender.csproj.GenerateResource.Cache
+C:\Source Code\rsservice_recommender\obj\Release\rsservice_recommender.exe
+C:\Source Code\rsservice_recommender\obj\Release\rsservice_recommender.pdb
+C:\Source Code FINAL\rsservice_recommender\bin\Release\rsservice_recommender.exe.config
+C:\Source Code FINAL\rsservice_recommender\obj\Release\rsservice_recommender.exe
+C:\Source Code FINAL\rsservice_recommender\obj\Release\rsservice_recommender.pdb
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsservice_recommender.exe.config
+D:\Source Code FINAL VERSION 1\rsservice_recommender\obj\Release\rsservice_recommender.exe
+D:\Source Code FINAL VERSION 1\rsservice_recommender\obj\Release\rsservice_recommender.pdb
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsservice_recommender.exe
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsservice_recommender.pdb
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\dataintergration_lib.dll
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsglobal_lib.dll
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsrecommendation_lib.dll
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsbo_lib.dll
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsdao_lib.dll
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsclustering_lib.dll
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\algorithm_lib.dll
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\dataintergration_lib.pdb
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsglobal_lib.pdb
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsrecommendation_lib.pdb
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsbo_lib.pdb
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsdao_lib.pdb
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsclustering_lib.pdb
+D:\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\algorithm_lib.pdb
+D:\Source Code FINAL VERSION 1\rsservice_recommender\obj\Release\ResolveAssemblyReference.cache
+D:\Source Code FINAL VERSION 1\rsservice_recommender\obj\Release\rsservice_recommender.Properties.Resources.resources
+D:\Source Code FINAL VERSION 1\rsservice_recommender\obj\Release\GenerateResource-ResGen.read.1.tlog
+D:\Source Code FINAL VERSION 1\rsservice_recommender\obj\Release\GenerateResource-ResGen.write.1.tlog
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsservice_recommender.exe.config
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsservice_recommender.exe
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsservice_recommender.pdb
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\dataintergration_lib.dll
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsglobal_lib.dll
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsrecommendation_lib.dll
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsbo_lib.dll
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsdao_lib.dll
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsclustering_lib.dll
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\algorithm_lib.dll
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\dataintergration_lib.pdb
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsglobal_lib.pdb
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsrecommendation_lib.pdb
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsbo_lib.pdb
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsdao_lib.pdb
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsclustering_lib.pdb
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\algorithm_lib.pdb
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\obj\Release\rsservice_recommender.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\obj\Release\rsservice_recommender.Properties.Resources.resources
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\obj\Release\rsservice_recommender.csproj.GenerateResource.Cache
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\obj\Release\rsservice_recommender.exe
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsservice_recommender\obj\Release\rsservice_recommender.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsservice_recommender.exe.config
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\obj\Release\rsservice_recommender.exe
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\obj\Release\rsservice_recommender.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsservice_recommender.exe
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsservice_recommender.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\dataintergration_lib.dll
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsglobal_lib.dll
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsrecommendation_lib.dll
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsbo_lib.dll
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsdao_lib.dll
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsclustering_lib.dll
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\algorithm_lib.dll
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\dataintergration_lib.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsglobal_lib.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsrecommendation_lib.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsbo_lib.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsdao_lib.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\rsclustering_lib.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Release\algorithm_lib.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\obj\Release\rsservice_recommender.csprojResolveAssemblyReference.cache
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\obj\Release\rsservice_recommender.Properties.Resources.resources
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\obj\Release\rsservice_recommender.csproj.GenerateResource.Cache

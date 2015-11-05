@@ -1,0 +1,4 @@
+C:\Project_New\Source Code\dataintergration_dao\bin\Release\dataintergration_dao.dll
+C:\Project_New\Source Code\dataintergration_dao\bin\Release\dataintergration_dao.pdb
+C:\Project_New\Source Code\dataintergration_dao\obj\Release\dataintergration_dao.dll
+C:\Project_New\Source Code\dataintergration_dao\obj\Release\dataintergration_dao.pdb

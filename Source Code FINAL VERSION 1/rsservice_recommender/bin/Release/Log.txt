@@ -1,0 +1,203 @@
+
+28/10/2014 00:00:00: Hello
+
+
+28/10/2014 00:00:00: La référence d'objet n'est pas définie à une instance d'un objet.
+
+
+28/10/2014 00:00:00: La référence d'objet n'est pas définie à une instance d'un objet.
+
+
+30/10/2014 13:32:18: L'index se trouve en dehors des limites du tableau.
+
+
+30/10/2014 13:45:18: L'index se trouve en dehors des limites du tableau.
+
+
+31/10/2014 11:55:49: Un DataReader associé à cette commande est déjà ouvert. Il doit d'abord être fermé.
+
+
+31/10/2014 12:16:07: Expiration du délai d'attente. Le délai d'attente s'est écoulé avant la fin de l'opération ou le serveur ne répond pas.
+
+
+31/10/2014 12:17:36: Expiration du délai d'attente. Le délai d'attente s'est écoulé avant la fin de l'opération ou le serveur ne répond pas.
+
+
+31/10/2014 20:56:23: La référence d'objet n'est pas définie à une instance d'un objet.
+
+
+01/11/2014 18:48:32: La référence d'objet n'est pas définie à une instance d'un objet.
+
+
+02/11/2014 19:42:28: La référence d'objet n'est pas définie à une instance d'un objet.
+
+
+03/11/2014 14:54:26: Expiration du délai d'attente. Le délai d'attente s'est écoulé avant la fin de l'opération ou le serveur ne répond pas.
+
+
+03/11/2014 14:56:05: Expiration du délai d'attente. Le délai d'attente s'est écoulé avant la fin de l'opération ou le serveur ne répond pas.
+
+
+04/11/2014 09:23:59: Expiration du délai d'attente. Le délai d'attente s'est écoulé avant la fin de l'opération ou le serveur ne répond pas.
+
+
+04/11/2014 09:34:07: Expiration du délai d'attente. Le délai d'attente s'est écoulé avant la fin de l'opération ou le serveur ne répond pas.
+
+
+04/11/2014 16:49:18: Expiration du délai d'attente. Le délai d'attente s'est écoulé avant la fin de l'opération ou le serveur ne répond pas.
+
+
+04/11/2014 16:53:37: Expiration du délai d'attente. Le délai d'attente s'est écoulé avant la fin de l'opération ou le serveur ne répond pas.
+
+
+04/11/2014 16:55:02: Expiration du délai d'attente. Le délai d'attente s'est écoulé avant la fin de l'opération ou le serveur ne répond pas.
+
+
+10/11/2014 10:52:29: Une erreur liée au réseau ou spécifique à l'instance s'est produite lors de l'établissement d'une connexion à SQL Server. Le serveur est introuvable ou n'est pas accessible. Vérifiez que le nom de l'instance est correct et que SQL Server est configuré pour autoriser les connexions distantes. (provider: Interfaces réseau SQL, error: 26 - Erreur lors de la localisation du serveur/de l'instance spécifiés)
+
+
+10/11/2014 11:05:31: Une erreur liée au réseau ou spécifique à l'instance s'est produite lors de l'établissement d'une connexion à SQL Server. Le serveur est introuvable ou n'est pas accessible. Vérifiez que le nom de l'instance est correct et que SQL Server est configuré pour autoriser les connexions distantes. (provider: Interfaces réseau SQL, error: 26 - Erreur lors de la localisation du serveur/de l'instance spécifiés)
+
+
+10/11/2014 13:53:39: Invalid column name 'Price'.
+
+
+10/11/2014 18:32:03: There are more columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement.
+
+
+11/11/2014 00:00:36: Invalid column name 'Price'.
+
+
+11/11/2014 16:41:54: Invalid column name 'ProduitID'.
+
+
+27/11/2014 13:18:24: Cannot open database "TOULEMB_V3" requested by the login. The login failed.
+Login failed for user 'E225-LITA-NGO\ngo-admin'.
+
+
+27/11/2014 13:18:36: Cannot open database "TOULEMB_V3" requested by the login. The login failed.
+Login failed for user 'E225-LITA-NGO\ngo-admin'.
+
+
+27/11/2014 15:54:33: Cannot open database "RS_DB" requested by the login. The login failed.
+Login failed for user 'E225-LITA-NGO\ngo-admin'.
+
+
+27/11/2014 15:54:55: Cannot open database "RS_DB" requested by the login. The login failed.
+Login failed for user 'E225-LITA-NGO\ngo-admin'.
+
+
+27/11/2014 15:55:01: Cannot open database "RS_DB" requested by the login. The login failed.
+Login failed for user 'E225-LITA-NGO\ngo-admin'.
+
+
+27/11/2014 15:55:07: Cannot open database "RS_DB" requested by the login. The login failed.
+Login failed for user 'E225-LITA-NGO\ngo-admin'.
+
+
+27/11/2014 16:10:00: Invalid object name 'RS.SYSTEM_SETTING_TBL'.
+
+
+03/12/2014 17:00:50: La référence d'objet n'est pas définie à une instance d'un objet.
+
+
+03/12/2014 17:29:58: Les transactions parallèles ne sont pas prises en charge par SqlConnection.
+
+
+03/12/2014 17:35:01: The name "UserID" is not permitted in this context. Valid expressions are constants, constant expressions, and (in some contexts) variables. Column names are not permitted.
+
+
+03/12/2014 17:42:40: There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement.
+
+
+03/12/2014 17:45:06: Tentative non valide de lecture lorsque aucune donnée n'est présente.
+
+
+03/12/2014 17:47:11: Tentative non valide de lecture lorsque aucune donnée n'est présente.
+
+
+03/12/2014 17:47:48: Tentative non valide de lecture lorsque aucune donnée n'est présente.
+
+
+03/12/2014 17:49:39: Tentative non valide de lecture lorsque aucune donnée n'est présente.
+
+
+03/12/2014 17:50:36: Tentative non valide de lecture lorsque aucune donnée n'est présente.
+
+
+03/12/2014 17:52:46: Tentative non valide de lecture lorsque aucune donnée n'est présente.
+
+
+04/12/2014 11:25:04: Incorrect syntax near 'RS'.
+
+
+05/12/2014 18:28:31: Expiration du délai d'attente. Le délai d'attente s'est écoulé avant la fin de l'opération ou le serveur ne répond pas.
+
+
+08/12/2014 10:45:13: Expiration du délai d'attente. Le délai d'attente s'est écoulé avant la fin de l'opération ou le serveur ne répond pas.
+
+
+08/12/2014 15:25:14: Impossible d'effectuer un cast d'un objet de DBNull en d'autres types.
+
+
+08/12/2014 16:54:17: Impossible d'effectuer un cast d'un objet de DBNull en d'autres types.
+
+
+08/12/2014 17:49:09: Impossible d'effectuer un cast d'un objet de DBNull en d'autres types.
+
+
+08/12/2014 18:19:09: Impossible d'effectuer un cast d'un objet de DBNull en d'autres types.
+
+
+09/12/2014 16:41:16: Expiration du délai d'attente. Le délai d'attente s'est écoulé avant la fin de l'opération ou le serveur ne répond pas.
+
+
+9/20/2015 9:31:31 AM: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+
+
+9/20/2015 5:04:42 PM: Invalid object name 'RS.RECOMMENDATION_SCHEDULE_TBL'.
+
+
+9/20/2015 5:09:42 PM: Invalid object name 'RS.RECOMMENDATION_SCHEDULE_TBL'.
+
+
+9/20/2015 5:12:32 PM: Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+
+22/09/2015 23:36:13: Invalid object name 'RS.RECOMMENDATION_SCHEDULE_TBL'.
+
+
+22/09/2015 23:40:19: Invalid object name 'RS.RECOMMENDATION_SCHEDULE_TBL'.
+
+
+23/09/2015 8:09:06: Invalid object name 'RS.PRICE_TBL'.
+
+
+23/09/2015 11:13:17: Invalid object name 'RS.PRICE_TBL'.
+
+
+23/09/2015 20:58:45: Invalid object name 'RS.PRICE_TBL'.
+
+
+24/09/2015 12:24:29: Invalid object name 'RS.PRICE_TBL'.
+
+
+24/09/2015 23:45:42: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+
+25/09/2015 0:16:37: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+
+25/09/2015 0:17:57: Invalid object name 'dbo.TOULEMBAL$Customer'.
+
+
+25/09/2015 0:18:15: Invalid object name 'dbo.TOULEMBAL$Customer'.
+
+
+25/09/2015 0:30:53: Invalid object name 'RS.PRICE_TBL'.
+
+
+05/11/2015 07:54: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+
+
+05/11/2015 07:55: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)

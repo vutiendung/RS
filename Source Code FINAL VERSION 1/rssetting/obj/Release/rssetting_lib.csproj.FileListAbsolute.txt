@@ -1,0 +1,44 @@
+C:\Project_New\Source Code\rssetting\bin\Release\rssetting.dll
+C:\Project_New\Source Code\rssetting\bin\Release\rssetting.pdb
+C:\Project_New\Source Code\rssetting\bin\Release\rsbo_lib.dll
+C:\Project_New\Source Code\rssetting\bin\Release\rsdao_lib.dll
+C:\Project_New\Source Code\rssetting\bin\Release\rsglobal_lib.dll
+C:\Project_New\Source Code\rssetting\bin\Release\rsbo_lib.pdb
+C:\Project_New\Source Code\rssetting\bin\Release\rsdao_lib.pdb
+C:\Project_New\Source Code\rssetting\bin\Release\rsglobal_lib.pdb
+C:\Project_New\Source Code\rssetting\obj\Release\rssetting_lib.csprojResolveAssemblyReference.cache
+C:\Project_New\Source Code\rssetting\obj\Release\rssetting.dll
+C:\Project_New\Source Code\rssetting\obj\Release\rssetting.pdb
+E:\Source Code\rssetting\bin\Release\rssetting.dll
+E:\Source Code\rssetting\bin\Release\rssetting.pdb
+E:\Source Code\rssetting\bin\Release\rsbo_lib.dll
+E:\Source Code\rssetting\bin\Release\rsdao_lib.dll
+E:\Source Code\rssetting\bin\Release\rsglobal_lib.dll
+E:\Source Code\rssetting\bin\Release\rsbo_lib.pdb
+E:\Source Code\rssetting\bin\Release\rsdao_lib.pdb
+E:\Source Code\rssetting\bin\Release\rsglobal_lib.pdb
+E:\Source Code\rssetting\obj\Release\rssetting_lib.csprojResolveAssemblyReference.cache
+E:\Source Code\rssetting\obj\Release\rssetting.dll
+E:\Source Code\rssetting\obj\Release\rssetting.pdb
+C:\Source Code\rssetting\bin\Release\rssetting.dll
+C:\Source Code\rssetting\bin\Release\rssetting.pdb
+C:\Source Code\rssetting\bin\Release\rsbo_lib.dll
+C:\Source Code\rssetting\bin\Release\rsdao_lib.dll
+C:\Source Code\rssetting\bin\Release\rsglobal_lib.dll
+C:\Source Code\rssetting\bin\Release\rsbo_lib.pdb
+C:\Source Code\rssetting\bin\Release\rsdao_lib.pdb
+C:\Source Code\rssetting\bin\Release\rsglobal_lib.pdb
+C:\Source Code\rssetting\obj\Release\rssetting_lib.csprojResolveAssemblyReference.cache
+C:\Source Code\rssetting\obj\Release\rssetting.dll
+C:\Source Code\rssetting\obj\Release\rssetting.pdb
+D:\Source Code FINAL VERSION 1\rssetting\bin\Release\rssetting.dll
+D:\Source Code FINAL VERSION 1\rssetting\bin\Release\rssetting.pdb
+D:\Source Code FINAL VERSION 1\rssetting\bin\Release\rsbo_lib.dll
+D:\Source Code FINAL VERSION 1\rssetting\bin\Release\rsdao_lib.dll
+D:\Source Code FINAL VERSION 1\rssetting\bin\Release\rsglobal_lib.dll
+D:\Source Code FINAL VERSION 1\rssetting\bin\Release\rsbo_lib.pdb
+D:\Source Code FINAL VERSION 1\rssetting\bin\Release\rsdao_lib.pdb
+D:\Source Code FINAL VERSION 1\rssetting\bin\Release\rsglobal_lib.pdb
+D:\Source Code FINAL VERSION 1\rssetting\obj\Release\ResolveAssemblyReference.cache
+D:\Source Code FINAL VERSION 1\rssetting\obj\Release\rssetting.dll
+D:\Source Code FINAL VERSION 1\rssetting\obj\Release\rssetting.pdb

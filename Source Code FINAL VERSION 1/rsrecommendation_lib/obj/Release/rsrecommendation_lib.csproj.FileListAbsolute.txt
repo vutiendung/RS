@@ -1,0 +1,98 @@
+C:\Project_New\Source Code\rsrecommendation_lib\bin\Release\rsrecommendation_lib.dll
+C:\Project_New\Source Code\rsrecommendation_lib\bin\Release\rsrecommendation_lib.pdb
+C:\Project_New\Source Code\rsrecommendation_lib\bin\Release\rsbo_lib.dll
+C:\Project_New\Source Code\rsrecommendation_lib\bin\Release\rsclustering_lib.dll
+C:\Project_New\Source Code\rsrecommendation_lib\bin\Release\rsdao_lib.dll
+C:\Project_New\Source Code\rsrecommendation_lib\bin\Release\rsglobal_lib.dll
+C:\Project_New\Source Code\rsrecommendation_lib\bin\Release\algorithm_lib.dll
+C:\Project_New\Source Code\rsrecommendation_lib\bin\Release\rsbo_lib.pdb
+C:\Project_New\Source Code\rsrecommendation_lib\bin\Release\rsclustering_lib.pdb
+C:\Project_New\Source Code\rsrecommendation_lib\bin\Release\rsdao_lib.pdb
+C:\Project_New\Source Code\rsrecommendation_lib\bin\Release\rsglobal_lib.pdb
+C:\Project_New\Source Code\rsrecommendation_lib\bin\Release\algorithm_lib.pdb
+C:\Project_New\Source Code\rsrecommendation_lib\obj\Release\rsrecommendation_lib.dll
+C:\Project_New\Source Code\rsrecommendation_lib\obj\Release\rsrecommendation_lib.pdb
+C:\Project_New\Source Code\rsrecommendation_lib\obj\Release\rsrecommendation_lib.csprojResolveAssemblyReference.cache
+E:\Source Code\rsrecommendation_lib\bin\Release\rsrecommendation_lib.dll
+E:\Source Code\rsrecommendation_lib\bin\Release\rsrecommendation_lib.pdb
+E:\Source Code\rsrecommendation_lib\bin\Release\rsbo_lib.dll
+E:\Source Code\rsrecommendation_lib\bin\Release\rsclustering_lib.dll
+E:\Source Code\rsrecommendation_lib\bin\Release\rsdao_lib.dll
+E:\Source Code\rsrecommendation_lib\bin\Release\rsglobal_lib.dll
+E:\Source Code\rsrecommendation_lib\bin\Release\algorithm_lib.dll
+E:\Source Code\rsrecommendation_lib\bin\Release\rsbo_lib.pdb
+E:\Source Code\rsrecommendation_lib\bin\Release\rsclustering_lib.pdb
+E:\Source Code\rsrecommendation_lib\bin\Release\rsdao_lib.pdb
+E:\Source Code\rsrecommendation_lib\bin\Release\rsglobal_lib.pdb
+E:\Source Code\rsrecommendation_lib\bin\Release\algorithm_lib.pdb
+E:\Source Code\rsrecommendation_lib\obj\Release\rsrecommendation_lib.csprojResolveAssemblyReference.cache
+E:\Source Code\rsrecommendation_lib\obj\Release\rsrecommendation_lib.dll
+E:\Source Code\rsrecommendation_lib\obj\Release\rsrecommendation_lib.pdb
+C:\Source Code\rsrecommendation_lib\bin\Release\rsrecommendation_lib.dll
+C:\Source Code\rsrecommendation_lib\bin\Release\rsrecommendation_lib.pdb
+C:\Source Code\rsrecommendation_lib\bin\Release\dataintergration_lib.dll
+C:\Source Code\rsrecommendation_lib\bin\Release\rsbo_lib.dll
+C:\Source Code\rsrecommendation_lib\bin\Release\rsclustering_lib.dll
+C:\Source Code\rsrecommendation_lib\bin\Release\rsdao_lib.dll
+C:\Source Code\rsrecommendation_lib\bin\Release\rsglobal_lib.dll
+C:\Source Code\rsrecommendation_lib\bin\Release\algorithm_lib.dll
+C:\Source Code\rsrecommendation_lib\bin\Release\dataintergration_lib.pdb
+C:\Source Code\rsrecommendation_lib\bin\Release\rsbo_lib.pdb
+C:\Source Code\rsrecommendation_lib\bin\Release\rsclustering_lib.pdb
+C:\Source Code\rsrecommendation_lib\bin\Release\rsdao_lib.pdb
+C:\Source Code\rsrecommendation_lib\bin\Release\rsglobal_lib.pdb
+C:\Source Code\rsrecommendation_lib\bin\Release\algorithm_lib.pdb
+C:\Source Code\rsrecommendation_lib\obj\Release\rsrecommendation_lib.csprojResolveAssemblyReference.cache
+C:\Source Code\rsrecommendation_lib\obj\Release\rsrecommendation_lib.dll
+C:\Source Code\rsrecommendation_lib\obj\Release\rsrecommendation_lib.pdb
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsrecommendation_lib.dll
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsrecommendation_lib.pdb
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\dataintergration_lib.dll
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsbo_lib.dll
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsclustering_lib.dll
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsdao_lib.dll
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsglobal_lib.dll
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\algorithm_lib.dll
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\dataintergration_lib.pdb
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsbo_lib.pdb
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsclustering_lib.pdb
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsdao_lib.pdb
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsglobal_lib.pdb
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\algorithm_lib.pdb
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\obj\Release\ResolveAssemblyReference.cache
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\obj\Release\rsrecommendation_lib.dll
+D:\Source Code FINAL VERSION 1\rsrecommendation_lib\obj\Release\rsrecommendation_lib.pdb
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsrecommendation_lib.dll
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsrecommendation_lib.pdb
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\dataintergration_lib.dll
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsbo_lib.dll
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsclustering_lib.dll
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsdao_lib.dll
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsglobal_lib.dll
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\algorithm_lib.dll
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\dataintergration_lib.pdb
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsbo_lib.pdb
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsclustering_lib.pdb
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsdao_lib.pdb
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsglobal_lib.pdb
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\algorithm_lib.pdb
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\obj\Release\rsrecommendation_lib.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\obj\Release\rsrecommendation_lib.dll
+C:\Users\Admin\Downloads\BigData\code\Source Code FINAL VERSION 1\rsrecommendation_lib\obj\Release\rsrecommendation_lib.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsrecommendation_lib.dll
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsrecommendation_lib.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\dataintergration_lib.dll
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsbo_lib.dll
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsclustering_lib.dll
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsdao_lib.dll
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsglobal_lib.dll
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\algorithm_lib.dll
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\dataintergration_lib.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsbo_lib.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsclustering_lib.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsdao_lib.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\rsglobal_lib.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Release\algorithm_lib.pdb
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\obj\Release\rsrecommendation_lib.csprojResolveAssemblyReference.cache
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\obj\Release\rsrecommendation_lib.dll
+E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\obj\Release\rsrecommendation_lib.pdb
