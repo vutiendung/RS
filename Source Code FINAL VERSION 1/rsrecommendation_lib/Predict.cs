@@ -35,7 +35,8 @@ namespace rsrecommendation_lib
                 Dictionary<string, double> UCA = predictMC.getUCA(dao);
 
                 //Data service 
-                IntergrationManager manager = new IntergrationManager(); manager.execute();
+                IntergrationManager manager = new IntergrationManager(); 
+                manager.execute();
 
                 //Learn the quantity GAP
                 List<ADDGAP> lstADDGAP = predictMC.GetListOfNewGAP(dao);       //get list of new GAP

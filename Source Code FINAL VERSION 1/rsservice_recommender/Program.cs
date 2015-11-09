@@ -11,7 +11,7 @@ namespace rsservice_recommender
     static class Program
     {
         /// <summary>
-        /// Point d'entrée principal de l'application.
+        /// Main entry point of the application.
         /// </summary>
         [STAThread]
         static void Main()
@@ -20,9 +20,12 @@ namespace rsservice_recommender
             try
             {
                 // 12 Month - 1399s
-                // MessageBox.Show("Start.");
+                MessageBox.Show("Start.");
                 DateTime start = DateTime.Now;
+
+                //Start Recommend system
                 new Predict().LoadRecommendation(ConstantValues.LOGIN_ID_AUTO);
+
                 DateTime end = DateTime.Now;
                 time_Seconds = Convert.ToInt32((end - start).TotalSeconds);
             }
@@ -32,7 +35,7 @@ namespace rsservice_recommender
             }
             finally
             {
-                // MessageBox.Show("Finish - Time:" + time_Seconds);
+                MessageBox.Show("Finish - Time:" + time_Seconds);
                 Application.Exit();
             }
         }
