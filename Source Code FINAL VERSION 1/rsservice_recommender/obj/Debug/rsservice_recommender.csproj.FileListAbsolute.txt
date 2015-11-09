@@ -85,3 +85,25 @@ E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\obj\Debug\rs
 E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\obj\Debug\rsservice_recommender.csproj.GenerateResource.Cache
 E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\obj\Debug\rsservice_recommender.exe
 E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsservice_recommender\obj\Debug\rsservice_recommender.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\rsservice_recommender.exe.config
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\rsservice_recommender.exe
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\rsservice_recommender.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\dataintergration_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\rsglobal_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\rsrecommendation_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\rsbo_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\rsdao_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\rsclustering_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\algorithm_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\dataintergration_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\rsglobal_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\rsrecommendation_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\rsbo_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\rsdao_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\rsclustering_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\bin\Debug\algorithm_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\obj\Debug\rsservice_recommender.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\obj\Debug\rsservice_recommender.Properties.Resources.resources
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\obj\Debug\rsservice_recommender.csproj.GenerateResource.Cache
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\obj\Debug\rsservice_recommender.exe
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsservice_recommender\obj\Debug\rsservice_recommender.pdb

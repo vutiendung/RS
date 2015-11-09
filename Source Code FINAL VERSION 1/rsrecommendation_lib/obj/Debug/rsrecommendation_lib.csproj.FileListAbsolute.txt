@@ -128,3 +128,20 @@ E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Debug\alg
 E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\obj\Debug\rsrecommendation_lib.csprojResolveAssemblyReference.cache
 E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\obj\Debug\rsrecommendation_lib.dll
 E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsrecommendation_lib\obj\Debug\rsrecommendation_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Debug\rsrecommendation_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Debug\rsrecommendation_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Debug\dataintergration_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Debug\rsbo_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Debug\rsclustering_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Debug\rsdao_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Debug\rsglobal_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Debug\algorithm_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Debug\dataintergration_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Debug\rsbo_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Debug\rsclustering_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Debug\rsdao_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Debug\rsglobal_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\bin\Debug\algorithm_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\obj\Debug\rsrecommendation_lib.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\obj\Debug\rsrecommendation_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsrecommendation_lib\obj\Debug\rsrecommendation_lib.pdb

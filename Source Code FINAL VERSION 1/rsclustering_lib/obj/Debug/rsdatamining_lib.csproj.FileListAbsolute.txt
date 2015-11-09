@@ -50,3 +50,16 @@ E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsclustering_lib\bin\Debug\rsgloba
 E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsclustering_lib\obj\Debug\rsdatamining_lib.csprojResolveAssemblyReference.cache
 E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsclustering_lib\obj\Debug\rsclustering_lib.dll
 E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsclustering_lib\obj\Debug\rsclustering_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsclustering_lib\bin\Debug\rsclustering_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsclustering_lib\bin\Debug\rsclustering_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsclustering_lib\bin\Debug\algorithm_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsclustering_lib\bin\Debug\rsbo_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsclustering_lib\bin\Debug\rsdao_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsclustering_lib\bin\Debug\rsglobal_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsclustering_lib\bin\Debug\algorithm_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsclustering_lib\bin\Debug\rsbo_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsclustering_lib\bin\Debug\rsdao_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsclustering_lib\bin\Debug\rsglobal_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsclustering_lib\obj\Debug\rsdatamining_lib.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsclustering_lib\obj\Debug\rsclustering_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsclustering_lib\obj\Debug\rsclustering_lib.pdb

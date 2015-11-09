@@ -16,3 +16,12 @@
 
 
 05/11/2015 09:12: Keyword not supported: 'dungvt-pc\sqlexpress;initial catalog'.
+
+
+05/11/2015 22:39:13: Invalid object name 'RS.QTYGAP'.
+
+
+05/11/2015 23:48:16: Invalid object name 'dbo.TOULEMBAL$Customer'.
+
+
+09/11/2015 16:24:06: Invalid object name 'RS.QTYGAP'.

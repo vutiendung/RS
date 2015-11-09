@@ -61,3 +61,10 @@ E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsglobal_lib\bin\Debug\rsbo_lib.pd
 E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsglobal_lib\obj\Debug\rsglobal_lib.csprojResolveAssemblyReference.cache
 E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsglobal_lib\obj\Debug\rsglobal_lib.dll
 E:\Ky 4\projectRS\Source Code FINAL VERSION 1\rsglobal_lib\obj\Debug\rsglobal_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsglobal_lib\bin\Debug\rsglobal_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsglobal_lib\bin\Debug\rsglobal_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsglobal_lib\bin\Debug\rsbo_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsglobal_lib\bin\Debug\rsbo_lib.pdb
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsglobal_lib\obj\Debug\rsglobal_lib.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsglobal_lib\obj\Debug\rsglobal_lib.dll
+C:\Users\Admin\Downloads\Trenlop\RS\Source Code FINAL VERSION 1\rsglobal_lib\obj\Debug\rsglobal_lib.pdb
