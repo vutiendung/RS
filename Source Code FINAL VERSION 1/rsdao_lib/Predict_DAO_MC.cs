@@ -58,7 +58,7 @@ namespace rsdao_lib
         {
             string sql;
             List<Recommendation_Meta_Item> list = new List<Recommendation_Meta_Item>();
-            //Content is cleared by M.C. Nguyen 19.9.2015
+            //Cong thuc tinh toan R1 tai day TraditionalUser
             return list;
         }
 

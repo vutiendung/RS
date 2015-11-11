@@ -22,27 +22,31 @@ namespace rsrecommendation_lib
             schedule.Log = "Recommendation";
             schedule.LoginID = LoginID;
             Predict_MC predictMC = new Predict_MC();
-
-
             try
             {
                 dao = new Predict_DAO_MC();
                 dao.beginTransaction();
                 RecommdationSchedule currentSchedule = dao.addRecommdationSchedule(schedule);
 
+                /*
+                 * new
+                 * */
+
                 // Settings st = getSettings();
                 Settings r = predictMC.GetRecommendationSeting(dao);
                 Dictionary<string, double> UCA = predictMC.getUCA(dao);
 
                 //Data service 
-                IntergrationManager manager = new IntergrationManager(); manager.execute();
+                IntergrationManager manager = new IntergrationManager(); 
+                manager.execute();
 
                 //Learn the quantity GAP
-                List<ADDGAP> lstADDGAP = predictMC.GetListOfNewGAP(dao);       //get list of new GAP
-                List<QTY_GAP> lstGAP = predictMC.UpdateQTYGap(dao, lstADDGAP);   //Update new GAP and return the GAP Matrix
+                /////////////////////////////////can be discard///////////////////////////////
+                //List<ADDGAP> lstADDGAP = predictMC.GetListOfNewGAP(dao);       //get list of new GAP
+                //List<QTY_GAP> lstGAP = predictMC.UpdateQTYGap(dao, lstADDGAP);   //Update new GAP and return the GAP Matrix
 
                 //Clustering service 
-                new ClusterUsers().startClusteringAuto();
+                //new ClusterUsers().startClusteringAuto();
 
                 /*
                  * 
@@ -53,63 +57,63 @@ namespace rsrecommendation_lib
                 //C4                
                 ComputeConfident(dao);
                 // C5 
-                ComputeDIST(dao);
+                //ComputeDIST(dao);
 
                 //=====================================================================================
 
                 //dao.CLEAN_RECOMMENDATION();
 
-                //// R1              
-                DateTime startC6 = DateTime.Now;
-                predictMC.R1(dao, currentSchedule, r.nbR1, UCA, lstGAP);
-                DateTime endC6 = DateTime.Now;
-                int time_Seconds_CLC6 = Convert.ToInt32((endC6 - startC6).TotalSeconds);
+               // //// R1              
+               // DateTime startC6 = DateTime.Now;
+               //// predictMC.R1(dao, currentSchedule, r.nbR1, UCA, lstGAP);
+               // DateTime endC6 = DateTime.Now;
+               // int time_Seconds_CLC6 = Convert.ToInt32((endC6 - startC6).TotalSeconds);
 
-                ////R2               
-                DateTime startC7 = DateTime.Now;
-                setRCPurchasedItems(dao, currentSchedule, r.nbR2, lstGAP);
-                DateTime endC7 = DateTime.Now;
-                int time_Seconds_CLC7 = Convert.ToInt32((endC7 - startC7).TotalSeconds);
+               // ////R2               
+               // DateTime startC7 = DateTime.Now;
+               //// setRCPurchasedItems(dao, currentSchedule, r.nbR2, lstGAP);
+               // DateTime endC7 = DateTime.Now;
+               // int time_Seconds_CLC7 = Convert.ToInt32((endC7 - startC7).TotalSeconds);
 
-                //// R3               
-                DateTime startC8 = DateTime.Now;
-                predictMC.R3(dao, currentSchedule, r.nbR3, UCA, lstGAP);
-                DateTime endC8 = DateTime.Now;
-                int time_Seconds_CLC8 = Convert.ToInt32((endC8 - startC8).TotalSeconds);
+               // //// R3               
+               // DateTime startC8 = DateTime.Now;
+               //// predictMC.R3(dao, currentSchedule, r.nbR3, UCA, lstGAP);
+               // DateTime endC8 = DateTime.Now;
+               // int time_Seconds_CLC8 = Convert.ToInt32((endC8 - startC8).TotalSeconds);
 
-                //// R4               
-                DateTime startC9 = DateTime.Now;
-                predictMC.R4(dao, currentSchedule, r.paramR4, UCA, lstGAP);
-                DateTime endC9 = DateTime.Now;
-                int time_Seconds_CLC9 = Convert.ToInt32((endC9 - startC9).TotalSeconds);
+               // //// R4               
+               // DateTime startC9 = DateTime.Now;
+               //// predictMC.R4(dao, currentSchedule, r.paramR4, UCA, lstGAP);
+               // DateTime endC9 = DateTime.Now;
+               // int time_Seconds_CLC9 = Convert.ToInt32((endC9 - startC9).TotalSeconds);
 
-                ////Get R1R4 for new users                 
-                DateTime startR1R4NewUsers = DateTime.Now;
-                predictMC.R1R4_FOR_NEW_USERS(dao, currentSchedule, UCA);
-                DateTime endR1R4NewUsers = DateTime.Now;
-                int time_second_R1R4NewUsers = Convert.ToInt32((endR1R4NewUsers - startR1R4NewUsers).TotalSeconds);
+               // ////Get R1R4 for new users                 
+               // DateTime startR1R4NewUsers = DateTime.Now;
+               // predictMC.R1R4_FOR_NEW_USERS(dao, currentSchedule, UCA);
+               // DateTime endR1R4NewUsers = DateTime.Now;
+               // int time_second_R1R4NewUsers = Convert.ToInt32((endR1R4NewUsers - startR1R4NewUsers).TotalSeconds);
 
-                //GetPrice             
-                dao.GetPrice();
+               // //GetPrice             
+               // dao.GetPrice();
 
-                Console.WriteLine("FINISH");
+               // Console.WriteLine("FINISH");
 
-                // build statistic log
-                List<string[]> lstStatic = dao.getStaticsData();
-                foreach (string[] statics in lstStatic)
-                {
-                    schedule.Log += statics[0] + statics[1] + ". ";
-                }
+               // // build statistic log
+               // List<string[]> lstStatic = dao.getStaticsData();
+               // foreach (string[] statics in lstStatic)
+               // {
+               //     schedule.Log += statics[0] + statics[1] + ". ";
+               // }
 
-                schedule.Log += "Time to find LRS01 : " + time_Seconds_CLC6.ToString() + ". ";
-                schedule.Log += "Time to find LRS02 : " + time_Seconds_CLC7.ToString() + ". ";
-                schedule.Log += "Time to find LRS03 : " + time_Seconds_CLC8.ToString() + ". ";
-                schedule.Log += "Time to find LRS04 : " + time_Seconds_CLC9.ToString() + ". ";
-                schedule.Log += "Time to find recommendations for new clients : " + time_second_R1R4NewUsers.ToString() + ". ";
-                schedule.Log += "System successfully stopped at " + DateTime.Now.ToString();
+               // schedule.Log += "Time to find LRS01 : " + time_Seconds_CLC6.ToString() + ". ";
+               // schedule.Log += "Time to find LRS02 : " + time_Seconds_CLC7.ToString() + ". ";
+               // schedule.Log += "Time to find LRS03 : " + time_Seconds_CLC8.ToString() + ". ";
+               // schedule.Log += "Time to find LRS04 : " + time_Seconds_CLC9.ToString() + ". ";
+               // schedule.Log += "Time to find recommendations for new clients : " + time_second_R1R4NewUsers.ToString() + ". ";
+               // schedule.Log += "System successfully stopped at " + DateTime.Now.ToString();
 
-                dao.updateRecommdationSchedule(schedule);
-                dao.commitTransaction();
+               // dao.updateRecommdationSchedule(schedule);
+               // dao.commitTransaction();
 
             }
             catch (Exception ex)
@@ -150,8 +154,8 @@ namespace rsrecommendation_lib
         public void ComputeConfident(Predict_DAO_MC dao)
         {
 
-            dao.CLEAN_CONF_Matrix();
-            dao.CLEAN_WEIG_Matrix();
+            //dao.CLEAN_CONF_Matrix();
+            //dao.CLEAN_WEIG_Matrix();
 
             List<string> list_ClusterID = dao.getAllClusterID();
             foreach (var item in list_ClusterID)
