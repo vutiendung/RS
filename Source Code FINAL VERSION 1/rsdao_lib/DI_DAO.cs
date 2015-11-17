@@ -12,11 +12,7 @@ namespace rsdao_lib
     public class DI_DAO : BASE_DAO
     {
 
-        public DI_DAO()
-            : base()
-        {
-
-        }
+        public DI_DAO() : base(){}
 
         private SqlConnection sourceConnection;
 
@@ -247,11 +243,7 @@ namespace rsdao_lib
             parameters.Add("@Type", table.Type);
             executeNonQuery(strQuery, parameters);
         }
-
-
-
-
-
+        
         public void removeDataSource(string DataID)
         {
             string strQuery = "DELETE [DI].[DATA_SOURCE] WHERE [DataID] = @DataID";
@@ -290,8 +282,8 @@ namespace rsdao_lib
             strSelect = "DELETE [RS].[TRANSACTION_TBL]";
             executeNonQuery(strSelect);
 
-            strSelect = "DELETE [RS].[PRICE_TBL]";
-            executeNonQuery(strSelect);
+            //strSelect = "DELETE [RS].[PRICE_TBL]";
+            //executeNonQuery(strSelect);
 
         }
     }

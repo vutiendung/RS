@@ -16,7 +16,7 @@ namespace rsrecommendation_lib
 
         public void LoadRecommendation(string LoginID)
         {
-            Predict_DAO_MC dao = null;
+            Predict_DAO_MCol dao = null;
 
             RecommdationSchedule schedule = new RecommdationSchedule();
             schedule.Log = "Recommendation";
@@ -24,15 +24,10 @@ namespace rsrecommendation_lib
             Predict_MC predictMC = new Predict_MC();
             try
             {
-                dao = new Predict_DAO_MC();
+                dao = new Predict_DAO_MCol();
                 dao.beginTransaction();
                 RecommdationSchedule currentSchedule = dao.addRecommdationSchedule(schedule);
-
-                /*
-                 * new
-                 * */
-
-                // Settings st = getSettings();
+                //Settings st = getSettings();
                 Settings r = predictMC.GetRecommendationSeting(dao);
                 Dictionary<string, double> UCA = predictMC.getUCA(dao);
 
@@ -40,13 +35,9 @@ namespace rsrecommendation_lib
                 IntergrationManager manager = new IntergrationManager(); 
                 manager.execute();
 
-                //Learn the quantity GAP
-                /////////////////////////////////can be discard///////////////////////////////
-                //List<ADDGAP> lstADDGAP = predictMC.GetListOfNewGAP(dao);       //get list of new GAP
-                //List<QTY_GAP> lstGAP = predictMC.UpdateQTYGap(dao, lstADDGAP);   //Update new GAP and return the GAP Matrix
 
                 //Clustering service 
-                //new ClusterUsers().startClusteringAuto();
+                new ClusterUsers().startClusteringAuto();
 
                 /*
                  * 
@@ -54,66 +45,69 @@ namespace rsrecommendation_lib
                  * this paragraph need to rewrite
                  * 
                  * */
-                //C4                
+                //calculate confident matrix - c4               
                 ComputeConfident(dao);
-                // C5 
-                //ComputeDIST(dao);
+                // calculate dist matrix - C5 
+                ComputeDIST(dao);
 
                 //=====================================================================================
 
-                //dao.CLEAN_RECOMMENDATION();
+                dao.CLEAN_RECOMMENDATION();
 
-               // //// R1              
-               // DateTime startC6 = DateTime.Now;
-               //// predictMC.R1(dao, currentSchedule, r.nbR1, UCA, lstGAP);
-               // DateTime endC6 = DateTime.Now;
-               // int time_Seconds_CLC6 = Convert.ToInt32((endC6 - startC6).TotalSeconds);
+                // R1              
+                DateTime startC6 = DateTime.Now;
+                // predictMC.R1(dao, currentSchedule, r.nbR1, UCA, lstGAP);
+                predictMC.R1(dao, currentSchedule);
+                DateTime endC6 = DateTime.Now;
+                int time_Seconds_CLC6 = Convert.ToInt32((endC6 - startC6).TotalSeconds);
 
-               // ////R2               
-               // DateTime startC7 = DateTime.Now;
-               //// setRCPurchasedItems(dao, currentSchedule, r.nbR2, lstGAP);
-               // DateTime endC7 = DateTime.Now;
-               // int time_Seconds_CLC7 = Convert.ToInt32((endC7 - startC7).TotalSeconds);
+                //////R2               
+                //DateTime startC7 = DateTime.Now;
+                //setRCPurchasedItems(dao, currentSchedule, r.nbR2, lstGAP);
+                //DateTime endC7 = DateTime.Now;
+                //int time_Seconds_CLC7 = Convert.ToInt32((endC7 - startC7).TotalSeconds);
 
-               // //// R3               
-               // DateTime startC8 = DateTime.Now;
-               //// predictMC.R3(dao, currentSchedule, r.nbR3, UCA, lstGAP);
-               // DateTime endC8 = DateTime.Now;
-               // int time_Seconds_CLC8 = Convert.ToInt32((endC8 - startC8).TotalSeconds);
+                //// R3               
+                DateTime startC8 = DateTime.Now;
+                // predictMC.R3(dao, currentSchedule, r.nbR3, UCA, lstGAP);
+                predictMC.R3(dao, currentSchedule);
+                DateTime endC8 = DateTime.Now;
+                int time_Seconds_CLC8 = Convert.ToInt32((endC8 - startC8).TotalSeconds);
 
-               // //// R4               
-               // DateTime startC9 = DateTime.Now;
-               //// predictMC.R4(dao, currentSchedule, r.paramR4, UCA, lstGAP);
-               // DateTime endC9 = DateTime.Now;
-               // int time_Seconds_CLC9 = Convert.ToInt32((endC9 - startC9).TotalSeconds);
+                //// R4               
+                DateTime startC9 = DateTime.Now;
+                // predictMC.R4(dao, currentSchedule, r.paramR4, UCA, lstGAP);
+                predictMC.R4(dao, currentSchedule);
+                DateTime endC9 = DateTime.Now;
+                int time_Seconds_CLC9 = Convert.ToInt32((endC9 - startC9).TotalSeconds);
 
-               // ////Get R1R4 for new users                 
-               // DateTime startR1R4NewUsers = DateTime.Now;
-               // predictMC.R1R4_FOR_NEW_USERS(dao, currentSchedule, UCA);
-               // DateTime endR1R4NewUsers = DateTime.Now;
-               // int time_second_R1R4NewUsers = Convert.ToInt32((endR1R4NewUsers - startR1R4NewUsers).TotalSeconds);
+                ////Get R1R4 for new users                 
+                DateTime startR1R4NewUsers = DateTime.Now;
+                predictMC.R1R4_FOR_NEW_USERS(dao, currentSchedule, UCA);
+                DateTime endR1R4NewUsers = DateTime.Now;
+                int time_second_R1R4NewUsers = Convert.ToInt32((endR1R4NewUsers - startR1R4NewUsers).TotalSeconds);
 
-               // //GetPrice             
-               // dao.GetPrice();
+                //GetPrice             
+                //dao.GetPrice();
 
-               // Console.WriteLine("FINISH");
+                Console.WriteLine("FINISH");
 
-               // // build statistic log
-               // List<string[]> lstStatic = dao.getStaticsData();
-               // foreach (string[] statics in lstStatic)
-               // {
-               //     schedule.Log += statics[0] + statics[1] + ". ";
-               // }
+                // build statistic log
+                List<string[]> lstStatic = dao.getStaticsData();
+                foreach (string[] statics in lstStatic)
+                {
+                    schedule.Log += statics[0] + statics[1] + ". ";
+                }
 
-               // schedule.Log += "Time to find LRS01 : " + time_Seconds_CLC6.ToString() + ". ";
-               // schedule.Log += "Time to find LRS02 : " + time_Seconds_CLC7.ToString() + ". ";
-               // schedule.Log += "Time to find LRS03 : " + time_Seconds_CLC8.ToString() + ". ";
-               // schedule.Log += "Time to find LRS04 : " + time_Seconds_CLC9.ToString() + ". ";
-               // schedule.Log += "Time to find recommendations for new clients : " + time_second_R1R4NewUsers.ToString() + ". ";
-               // schedule.Log += "System successfully stopped at " + DateTime.Now.ToString();
+                schedule.Log += "Time to find LRS01 : " + time_Seconds_CLC6.ToString() + ". ";
+                //schedule.Log += "Time to find LRS02 : " + time_Seconds_CLC7.ToString() + ". ";
+                schedule.Log += "Time to find LRS03 : " + time_Seconds_CLC8.ToString() + ". ";
+                schedule.Log += "Time to find LRS04 : " + time_Seconds_CLC9.ToString() + ". ";
+                schedule.Log += "Time to find recommendations for new clients : " + time_second_R1R4NewUsers.ToString() + ". ";
+                schedule.Log += "System successfully stopped at " + DateTime.Now.ToString();
 
-               // dao.updateRecommdationSchedule(schedule);
-               // dao.commitTransaction();
+                dao.updateRecommdationSchedule(schedule);
+                dao.commitTransaction();
 
             }
             catch (Exception ex)
@@ -147,15 +141,13 @@ namespace rsrecommendation_lib
 
         //---------------------------------------------------------------------------------------
         //This function computes the Confident Matrix and Weight Matrix, forllowing the formulars
-        //Created by Vuong Minh Tuan
-        //Corrected by MC. NGUYEN 21.10.2014.
         //---------------------------------------------------------------------------------------
 
-        public void ComputeConfident(Predict_DAO_MC dao)
+        public void ComputeConfident(Predict_DAO_MCol dao)
         {
 
-            //dao.CLEAN_CONF_Matrix();
-            //dao.CLEAN_WEIG_Matrix();
+            dao.CLEAN_CONF_Matrix();
+            dao.CLEAN_WEIG_Matrix();
 
             List<string> list_ClusterID = dao.getAllClusterID();
             foreach (var item in list_ClusterID)
@@ -163,14 +155,14 @@ namespace rsrecommendation_lib
                 List<Transac> u_transacs = dao.getTransac_ForMatrix_ByClusterID_V2(item);
                 if (u_transacs.Count > 0)
                 {
-                    // Get QuantityMatrix - MC OK
+                    // Get QuantityMatrix - MC
                     Dictionary<string, int> QM_dic_users = new Dictionary<string, int>();
                     Dictionary<string, int> QM_dic_items = new Dictionary<string, int>();
                     double[][] QuantityMatrix = Util.getQuantityMatrix_FromTransac_ByMetaItemID(u_transacs, out QM_dic_users, out QM_dic_items);
 
                     if (QuantityMatrix[0].Length > 1)
                     {
-                        // Compute Support One Item Matrix - MC OK
+                        // Compute Support One Item Matrix - MC
                         double[] S = new double[QuantityMatrix[0].Length];
                         for (int j = 0; j < QuantityMatrix[0].Length; j++)
                         {
@@ -181,7 +173,7 @@ namespace rsrecommendation_lib
                             S[j] = count;
                         }
 
-                        // Compute Support Matrix - MC OK
+                        // Compute Support Matrix - MC
                         double[][] SupportMatrix = new double[QuantityMatrix[0].Length][];
                         for (int i = 0; i < QuantityMatrix[0].Length; i++)
                             SupportMatrix[i] = new double[QuantityMatrix[0].Length];
@@ -194,7 +186,7 @@ namespace rsrecommendation_lib
                                         SupportMatrix[j][j2]++;
                         }
 
-                        // Compute CONF Matrix - MC OK
+                        // Compute CONF Matrix - MC
                         double[][] CONF = new double[QuantityMatrix[0].Length][];
                         for (int i = 0; i < QuantityMatrix[0].Length; i++)
                             CONF[i] = new double[QuantityMatrix[0].Length];
@@ -208,7 +200,7 @@ namespace rsrecommendation_lib
                                     CONF[i][j] = SupportMatrix[i][j] / S[i];
                         }
 
-                        // Compute WEIG Matrix - MC OK
+                        // Compute WEIG Matrix - MC
                         double[][] WEIG = new double[QuantityMatrix[0].Length][];
                         for (int i = 0; i < QuantityMatrix[0].Length; i++)
                             WEIG[i] = new double[QuantityMatrix[0].Length];
@@ -220,7 +212,7 @@ namespace rsrecommendation_lib
                                     WEIG[i][j] = computeWEIG(i, j, SupportMatrix, QuantityMatrix);
                         }
 
-                        // Save CONF Matrix - MC - OK
+                        // Save CONF Matrix - MC 
                         for (int i = 0; i < CONF.Length; i++)
                             for (int j = 0; j < CONF[0].Length; j++)
                                 if (CONF[i][j] > 0)
@@ -252,8 +244,6 @@ namespace rsrecommendation_lib
 
         //---------------------------------------------------------------------------------------
         //This function computes WEIG[i][j], with i, j are known
-        //Created by Vuong Minh Tuan
-        //Corrected all errors by MC. NGUYEN 21.10.2014
         //---------------------------------------------------------------------------------------
         private double computeWEIG(int i,
             int j,
@@ -284,14 +274,12 @@ namespace rsrecommendation_lib
         //---------------------------------------------------------------------------------------
         //This function computes the DISTANCE matrix and inserts it into the database
         //This is the distance between the two columns of the Rating Matrix
-        //Created by Vuong Minh Tuan
-        //Corrected all errors by MC. NGUYEN 21.10.2014.
         //---------------------------------------------------------------------------------------
 
-        public void ComputeDIST(Predict_DAO_MC dao)
+        public void ComputeDIST(Predict_DAO_MCol dao)
         {
 
-            dao.CLEAN_DIST_Matrix();
+            //dao.CLEAN_DIST_Matrix();
 
             List<string> list_ClusterID = dao.getAllClusterID();
             foreach (var item in list_ClusterID)
@@ -362,7 +350,6 @@ namespace rsrecommendation_lib
 
         public void setRCPurchasedItems(Predict_DAO dao, RecommdationSchedule schedule, int nbR2, List<QTY_GAP> lst)
         {
-            //Content is cleared by M.C. Nguyen 19.9.2015
         }
 
         public List<Recommendation_Meta_Item> Normaliser(List<Recommendation_Meta_Item> list)

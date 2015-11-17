@@ -11,10 +11,7 @@ namespace algorithm_lib
         private Dictionary<int, int> clustered_Data = new Dictionary<int, int>();
         private static double rho;
 
-        public G_KMSSC()
-        {
-
-        }
+        public G_KMSSC() {  }
 
         public void run()
         {

@@ -10,10 +10,7 @@ namespace rsdao_lib
 {
     public class Predict_DAO : Clustering_Base_DAO
     {
-        public Predict_DAO()
-            : base()
-        {
-        }
+        public Predict_DAO(): base(){}
 
         public List<User> getNewUser_UnBlocked()
         {
@@ -687,7 +684,7 @@ namespace rsdao_lib
 
         // V2.0 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
-        #region GUI-Sonnt
+        #region GUI-NT
         public List<RecommdationSchedule> getSchedules()
         {
             string strSelect = "SELECT [ScheduleID],[StartTime],[StopTime],[Log] FROM [RS].[RECOMMENDATION_SCHEDULE_TBL] ORDER BY [StartTime] DESC";
@@ -854,7 +851,7 @@ namespace rsdao_lib
 
         #endregion
 
-        #region SONNT-C7
+        #region SNT-C7
 
         public void removeDuplicateC6andC7()
         {
@@ -984,7 +981,6 @@ namespace rsdao_lib
 
             string strSelect = "SELECT [RS].[TRANSACTION_TBL].[UserID] ,AVG([Quantity]) as QAVG ,[MetaItemID] FROM [RS].[TRANSACTION_TBL], [RS].PARTION_TBL , [RS].ITEM_TBL WHERE [RS].PARTION_TBL.[UserID] = [RS].[TRANSACTION_TBL].[UserID] and [RS].[TRANSACTION_TBL].ItemID = [RS].ITEM_TBL.ItemID and [RS].PARTION_TBL.ClusterID = @ClusterID GROUP BY [RS].[TRANSACTION_TBL].[UserID], [MetaItemID] ";
 
-
             SqlDataReader dr = executeReader(strSelect, parameters);
 
             List<Transac> list = new List<Transac>();
@@ -1047,9 +1043,6 @@ namespace rsdao_lib
         //}
         public RecommdationSchedule addRecommdationSchedule(RecommdationSchedule schedule) //SONNT: has modified
         {
-/////////////////////
-            // error here. not found RECOMMENDATION_SCHEDULE_TBL. so. we need to repair RECOMMENDATION_SCHEDULE_TBL table or add in db
-            ///////////////
             string strQuery = "INSERT INTO [RS].[RECOMMENDATION_SCHEDULE_TBL] ([StartTime] ,[Log] ,[LoginID]) VALUES ( GETDATE(), @Log , @LoginID)";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@Log", schedule.Log);
@@ -1075,8 +1068,8 @@ namespace rsdao_lib
 
         public void CLEAN_RECOMMENDATION()
         {
-            executeNonQuery("truncate table [RS].[PRICE_RECOM_TBL]");
-            executeNonQuery("truncate table [RS].[PRICE_RECOM_NEWUSERS_TBL]");
+            //executeNonQuery("truncate table [RS].[PRICE_RECOM_TBL]");
+            //executeNonQuery("truncate table [RS].[PRICE_RECOM_NEWUSERS_TBL]");
             executeNonQuery("truncate table [RS].[RECOMMENDATION_TBL]");
             executeNonQuery("truncate table [RS].[RECOMMENDATION_NEWUSERS_TBL]");
         }

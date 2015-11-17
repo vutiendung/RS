@@ -15,7 +15,7 @@ namespace rsclustering_lib
     public class ClusterUsers : Base
     {
 
-        #region GUI - Sonnt
+        #region GUI - SNT
 
         public int[] getStaticData()
         {
@@ -416,16 +416,14 @@ namespace rsclustering_lib
                         List<MatrixItem> lstRMI = dao.computeRattingMatrixItem(item.U_SubCategoryID, st.Alpha);
                         double[][] x = Util.toMatrix_MatrixItem(lstRMI, out dic_users, out dic_items);
 
-                        if (dic_users.Count > st.U_M/2)
+                        if (dic_users.Count > st.U_M / 2)
                         {
-                            
-                                numUser += dic_users.Count;
-                                foreach (var it in dic_items)
-                                    if (!allItem.ContainsKey(it.Key))
-                                        allItem.Add(it.Key, it.Value);
+                            numUser += dic_users.Count;
+                            foreach (var it in dic_items)
+                                if (!allItem.ContainsKey(it.Key))
+                                    allItem.Add(it.Key, it.Value);
 
-                                LoadCluster(dao, st, ref existTransac, item.U_SubCategoryID, categoryName, dic_users, dic_items, x);
-                                              
+                            LoadCluster(dao, st, ref existTransac, item.U_SubCategoryID, categoryName, dic_users, dic_items, x);
                         }
                         else
                             add_SMALL_User_SubCategories(list_User_Categories, ref list_SMALL_User_SubCategories, item);
@@ -531,7 +529,7 @@ namespace rsclustering_lib
             Dictionary<string, int> dic_users,
             Dictionary<string, int> dic_items,
             double[][] x)
-            {
+        {
             if (x.Length > 0)
             {
                 existTransac = true;
@@ -543,68 +541,67 @@ namespace rsclustering_lib
                 cluster.addSetting(st.k, st.maxLoop, x, st.epsilon, st.Alpha, st.T, st.U_M);
                 clustered_Data = cluster.Clustering(st.cluster_type);
 
-                //cuong add if
                 //if (clustered_Data.Count > 0)
                 //{
-                    // Mapping UserID to clustered Data
-                    Dictionary<string, int> mapped_Data = map_ID_to_Index(dic_users, clustered_Data);
+                // Mapping UserID to clustered Data
+                Dictionary<string, int> mapped_Data = map_ID_to_Index(dic_users, clustered_Data);
 
-                    // Get Destination V
-                    double[][] v = cluster.getV();
+                // Get Destination V
+                double[][] v = cluster.getV();
 
-                    // Add new data
+                // Add new data
 
-                    #region C1 - Ratting Matrix
+                #region C1 - Ratting Matrix
 
-                    // Add Ratting Matrix
-                    for (int i = 0; i < x.Length; i++)
-                        for (int j = 0; j < x[0].Length; j++)
-                            if (x[i][j] > 0)
+                // Add Ratting Matrix
+                for (int i = 0; i < x.Length; i++)
+                    for (int j = 0; j < x[0].Length; j++)
+                        if (x[i][j] > 0)
+                        {
+                            try
                             {
-                                try
-                                {
-                                    MatrixItem matrixItem = new MatrixItem();
-                                    matrixItem.ClusterID = categoryName + (mapped_Data[Util.FindKeyByValue(dic_users, i)] + 1);
-                                    matrixItem.Row = Util.FindKeyByValue(dic_users, i);
-                                    matrixItem.Column = Util.FindKeyByValue(dic_items, j);
-                                    matrixItem.Cell = x[i][j];
-                                    dao.setRattingMatrix(matrixItem);
-                                }
-                                catch (Exception) { }
+                                MatrixItem matrixItem = new MatrixItem();
+                                matrixItem.ClusterID = categoryName + (mapped_Data[Util.FindKeyByValue(dic_users, i)] + 1);
+                                matrixItem.Row = Util.FindKeyByValue(dic_users, i);
+                                matrixItem.Column = Util.FindKeyByValue(dic_items, j);
+                                matrixItem.Cell = x[i][j];
+                                dao.setRattingMatrix(matrixItem);
                             }
+                            catch (Exception) { }
+                        }
 
-                    #endregion
+                #endregion
 
-                    // Add to USER_CLUSTER_TBL
-                    for (int i = 0; i < v.Length; i++)
-                        dao.addCluster(categoryName + (i + 1), U_SubCategoryID);
+                // Add to USER_CLUSTER_TBL
+                for (int i = 0; i < v.Length; i++)
+                    dao.addCluster(categoryName + (i + 1), U_SubCategoryID);
 
-                    // Add to PARTION_TBL
-                    foreach (var map in mapped_Data)
-                    {
-                        Partion detail = new Partion();
-                        detail.UserID = map.Key;
-                        detail.ClusterID = categoryName + (map.Value + 1);
-                        dao.addPARTION_TBL(detail);
-                    }
-
-                    // Add to USER_CENTROID_TBL
-                    for (int i = 0; i < v.Length; i++)
-                        for (int j = 0; j < v[0].Length; j++)
-                            if (!Double.NaN.Equals(v[i][j]))
-                            {
-                                try
-                                {
-                                    User_Centroid centroid = new User_Centroid();
-                                    centroid.Value = v[i][j];
-                                    centroid.ClusterID = categoryName + (i + 1);
-                                    centroid.MetaItemID = Util.FindKeyByValue(dic_items, j);
-                                    dao.add_User_Centroid(centroid);
-                                }
-                                catch (Exception) { }
-                            }
+                // Add to PARTION_TBL
+                foreach (var map in mapped_Data)
+                {
+                    Partion detail = new Partion();
+                    detail.UserID = map.Key;
+                    detail.ClusterID = categoryName + (map.Value + 1);
+                    dao.addPARTION_TBL(detail);
                 }
-            //}//cuong add
+
+                // Add to USER_CENTROID_TBL
+                for (int i = 0; i < v.Length; i++)
+                    for (int j = 0; j < v[0].Length; j++)
+                        if (!Double.NaN.Equals(v[i][j]))
+                        {
+                            try
+                            {
+                                User_Centroid centroid = new User_Centroid();
+                                centroid.Value = v[i][j];
+                                centroid.ClusterID = categoryName + (i + 1);
+                                centroid.MetaItemID = Util.FindKeyByValue(dic_items, j);
+                                dao.add_User_Centroid(centroid);
+                            }
+                            catch (Exception) { }
+                        }
+            }
+            //}
         }
 
         private static Dictionary<string, int> map_ID_to_Index(Dictionary<string, int> dic_users,

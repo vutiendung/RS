@@ -10,10 +10,7 @@ namespace rsdao_lib
 {
     public class Clustering_Base_DAO : Clustering_DAO
     {
-        public Clustering_Base_DAO()
-            : base()
-        {
-        }
+        public Clustering_Base_DAO() : base() {}
 
         public DateTime getCurrentTime()
         {
@@ -32,8 +29,7 @@ namespace rsdao_lib
         {
             List<System_Setting> lst = new List<System_Setting>();
             Dictionary<string, object> parameters = new Dictionary<string, object>();
-            SqlDataReader reader
-                = executeReader("SELECT [Key],[DataType],[Description] FROM [RS].[SYSTEM_SETTING_TBL] ", parameters);
+            SqlDataReader reader  = executeReader("SELECT [Key],[DataType],[Description] FROM [RS].[SYSTEM_SETTING_TBL] ", parameters);
             while (reader.Read())
             {
                 System_Setting cs = new System_Setting();

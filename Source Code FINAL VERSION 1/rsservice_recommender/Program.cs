@@ -19,7 +19,6 @@ namespace rsservice_recommender
             int time_Seconds = 0;
             try
             {
-                // 12 Month - 1399s
                 MessageBox.Show("Start.");
                 DateTime start = DateTime.Now;
 
@@ -28,6 +27,7 @@ namespace rsservice_recommender
 
                 DateTime end = DateTime.Now;
                 time_Seconds = Convert.ToInt32((end - start).TotalSeconds);
+                //finish recommend
             }
             catch (Exception ex)
             {

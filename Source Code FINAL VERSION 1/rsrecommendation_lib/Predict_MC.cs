@@ -14,8 +14,7 @@ namespace rsrecommendation_lib
     {
         #region Call Algorithms
 
-        //Corrected by MC. NGUYEN 22.10.2014
-        public void R1(Predict_DAO_MC dao, RecommdationSchedule schedule, int nbR1, Dictionary<string, double> UCA, List<QTY_GAP> list)
+        public void R1(Predict_DAO_MCol dao, RecommdationSchedule schedule, int nbR1, Dictionary<string, double> UCA, List<QTY_GAP> list)
         {
             //Get recommendations for traditional users
             List<Recommendation_Meta_Item> lrc_ForUserTra = getListRecommendation_R1_TraditionalUsers(dao, nbR1);
@@ -24,8 +23,96 @@ namespace rsrecommendation_lib
             AddGAPtoListRecommends(list, lrc_ForUserTra);
             dao.InsertList(lrc_ForUserTra, schedule);
         }
+        public void R1(Predict_DAO_MCol dao, RecommdationSchedule schedule)
+        {
+            List<Recommendation_Meta_Item> traditionalUsers1 = this.getListRecommendation_R1_TraditionalUsers(dao);
+            List<Recommendation_Meta_Item> traditionalUsers2 = this.GetQuantityTraditionalUsers(dao, traditionalUsers1);
+            this.Normaliser(traditionalUsers2);
+            dao.InsertList(traditionalUsers2, schedule);
+        }
+        public void R3(Predict_DAO_MCol dao, RecommdationSchedule schedule)
+        {
+            List<Recommendation_Meta_Item> recommendationR3 = this.GetRecommendationR3(dao);
+            List<Recommendation_Meta_Item> traditionalUsersR3 = this.GetQuantityTraditionalUsersR3(dao, recommendationR3);
+            this.Normaliser(traditionalUsersR3);
+            dao.InsertList(traditionalUsersR3, schedule);
+        }
 
-        public void R3(Predict_DAO_MC dao, RecommdationSchedule schedule, int nbR3, Dictionary<string, double> UCA, List<QTY_GAP> lst)
+        public void R4(Predict_DAO_MCol dao, RecommdationSchedule schedule)
+        {
+            List<Recommendation_Meta_Item> recommendationR4 = this.GetRecommendationR4(dao, 2.0);
+            this.Normaliser(recommendationR4);
+            dao.InsertList(recommendationR4, schedule);
+        }
+        public List<Recommendation_Meta_Item> GetRecommendationR4(Predict_DAO_MCol a, double param)
+        {
+            List<Recommendation_Meta_Item> list1 = new List<Recommendation_Meta_Item>();
+            List<string> list2 = new List<string>();
+            List<string> list3 = new List<string>();
+            List<string> list4 = new List<string>();
+            Dictionary<string, double> dictionary1 = new Dictionary<string, double>();
+            Dictionary<string, double> dictionary2 = new Dictionary<string, double>();
+            Dictionary<string, double> dictionary3 = new Dictionary<string, double>();
+            Dictionary<string, double> dictionary4 = new Dictionary<string, double>();
+            Dictionary<string, string> dictionary5 = new Dictionary<string, string>();
+            List<string> listClusterId = a.GetListClusterID();
+            Dictionary<string, string> listNewItem = a.GetListNewItem();
+            foreach (string cluster in listClusterId)
+            {
+                try
+                {
+                    Dictionary<string, double> listRateU = a.GetListRateU(cluster);
+                    Dictionary<string, double> listRateF = a.GetListRateF(cluster);
+                    foreach (KeyValuePair<string, double> keyValuePair1 in listRateU)
+                    {
+                        Dictionary<string, double> listRateUf = a.GetListRateUF(keyValuePair1.Key);
+                        double num1 = 0.0;
+                        string FamillyCode = "Not found";
+                        List<string> list5 = new List<string>();
+                        List<double> list6 = new List<double>();
+                        foreach (KeyValuePair<string, double> keyValuePair2 in listRateF)
+                        {
+                            double num2;
+                            if (listRateUf.ContainsKey(keyValuePair2.Key))
+                            {
+                                double num3 = keyValuePair2.Value;
+                                double num4 = keyValuePair1.Value;
+                                double num5 = keyValuePair2.Value;
+                                num2 = param * num5 * (1.0 / num4 - 1.0 / num3);
+                            }
+                            else
+                                num2 = 0.0;
+                            if (num2 > num1)
+                            {
+                                num1 = num2;
+                                FamillyCode = keyValuePair2.Key;
+                            }
+                        }
+                        if (num1 != 0.0)
+                        {
+                            double num2 = (double)a.getQTYR4(keyValuePair1.Key, FamillyCode, 1);
+                            foreach (KeyValuePair<string, string> keyValuePair2 in listNewItem)
+                            {
+                                if (keyValuePair2.Value.Equals(FamillyCode))
+                                    list1.Add(new Recommendation_Meta_Item()
+                                    {
+                                        UserID = keyValuePair1.Key,
+                                        RecommendType = ConstantValues.RC_TYPE_LRS04,
+                                        MetaItemID = keyValuePair2.Key,
+                                        Quantity = num2,
+                                        Score = num1
+                                    });
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+            return list1;
+        }
+        public void R3(Predict_DAO_MCol dao, RecommdationSchedule schedule, int nbR3, Dictionary<string, double> UCA, List<QTY_GAP> lst)
         {
             List<Recommendation_Meta_Item> list = GetRecommendationR3(dao, nbR3);
             list = GetQuantityTraditionalUsersR3(dao, list, UCA);
@@ -35,7 +122,7 @@ namespace rsrecommendation_lib
             dao.InsertList(list, schedule);
         }
 
-        public void R4(Predict_DAO_MC dao, RecommdationSchedule schedule, double paramR4, Dictionary<string, double> UCA, List<QTY_GAP> lst)
+        public void R4(Predict_DAO_MCol dao, RecommdationSchedule schedule, double paramR4, Dictionary<string, double> UCA, List<QTY_GAP> lst)
         {
             List<Recommendation_Meta_Item> list = GetRecommendationR4(dao, paramR4, UCA);
             Normaliser(list);
@@ -43,7 +130,103 @@ namespace rsrecommendation_lib
             dao.InsertList(list, schedule);
         }
 
-        public void R1R4_FOR_NEW_USERS(Predict_DAO_MC dao, RecommdationSchedule schedule, Dictionary<string, double> UCA)
+        public List<Recommendation_Meta_Item> GetQuantityTraditionalUsersR3(Predict_DAO_MCol a, List<Recommendation_Meta_Item> list)
+        {
+            for (int index = 0; index < list.Count; ++index)
+            {
+                double qualtityTraditionalUser = a.GetQualtityTraditionalUser(list[index]);
+                if (qualtityTraditionalUser != 0.0)
+                    list[index].Quantity = (double)((int)(list[index].Quantity + qualtityTraditionalUser) / 2);
+            }
+            return list;
+        }
+        //have formular here
+        public List<Recommendation_Meta_Item> GetRecommendationR3(Predict_DAO_MCol a)
+        {
+            List<Recommendation_Meta_Item> list1 = new List<Recommendation_Meta_Item>();
+            Recommendation_Meta_Item recommendationMetaItem1 = new Recommendation_Meta_Item();
+            List<CONF> list2 = new List<CONF>();
+            List<DIST> list3 = new List<DIST>();
+            List<string> list4 = new List<string>();
+            List<string> list5 = new List<string>();
+            List<string> list6 = new List<string>();
+            List<U_I_Q> list7 = new List<U_I_Q>();
+            foreach (string cluster in a.GetListClusterID())
+            {
+                List<CONF> confOfCluster = a.GetCONF_OfCluster(cluster);
+                List<DIST> distOfCluster = a.GetDIST_OfCluster(cluster);
+                List<string> listUserOfCluster = a.GetListUser_OfCluster(cluster);
+                List<U_I_Q> traditionalUsersMore = a.GetQuantityTraditionalUsers_More(cluster);
+                foreach (string user in listUserOfCluster)
+                {
+                    List<string> notPurchasedOfUser = a.GetListMetaItemNotPurchased_OfUser(user, cluster);
+                    List<string> listMetaItemOfUser = a.GetListMetaItem_OfUser(user);
+                    string str = "";
+                    double num1 = 0.0;
+                    for (int index1 = 0; index1 < notPurchasedOfUser.Count; ++index1)
+                    {
+                        double num2 = 0.0;
+                        double num3 = 0.0;
+                        double num4 = 1.0;
+                        for (int index2 = 0; index2 < listMetaItemOfUser.Count; ++index2)
+                        {
+                            for (int index3 = 0; index3 < confOfCluster.Count; ++index3)
+                            {
+                                if (confOfCluster[index3].MetaItemSource.Equals(listMetaItemOfUser[index2]) && confOfCluster[index3].MetaItemDestination.Equals(notPurchasedOfUser[index1]))
+                                {
+                                    num3 = confOfCluster[index3].Confident;
+                                    break;
+                                }
+                            }
+                            for (int index3 = 0; index3 < distOfCluster.Count; ++index3)
+                            {
+                                if (distOfCluster[index3].MetaItemDestination.Equals(listMetaItemOfUser[index2]) && distOfCluster[index3].MetaItemDestination.Equals(notPurchasedOfUser[index1]))
+                                {
+                                    num4 = distOfCluster[index3].Distance;
+                                    break;
+                                }
+                            }
+                            if (num4 != 0.0)
+                                num2 += num3 / num4;
+                        }
+                        if (num1 < num2 / (double)listMetaItemOfUser.Count)
+                        {
+                            num1 = num2;
+                            str = notPurchasedOfUser[index1];
+                        }
+                    }
+                    if (num1 != 0.0)
+                    {
+                        Recommendation_Meta_Item recommendationMetaItem2 = new Recommendation_Meta_Item();
+                        recommendationMetaItem2.UserID = user;
+                        recommendationMetaItem2.MetaItemID = str;
+                        recommendationMetaItem2.RecommendType = ConstantValues.RC_TYPE_LRS03;
+                        recommendationMetaItem2.Quantity = 0.0;
+                        for (int index = 0; index < traditionalUsersMore.Count; ++index)
+                        {
+                            if (traditionalUsersMore[index].MetaItemID.Equals(str))
+                            {
+                                recommendationMetaItem2.Quantity = traditionalUsersMore[index].QTY;
+                                break;
+                            }
+                        }
+                        recommendationMetaItem2.Score = num1;
+                        list1.Add(recommendationMetaItem2);
+                    }
+                }
+            }
+            return list1;
+        }
+        public List<Recommendation_Meta_Item> GetQuantityTraditionalUsers(Predict_DAO_MCol a, List<Recommendation_Meta_Item> list)
+        {
+            for (int index = 0; index < list.Count; ++index)
+            {
+                double qualtityTraditionalUser = a.GetQualtityTraditionalUser(list[index]);
+                list[index].Quantity = qualtityTraditionalUser == 0.0 ? 1.0 : (double)(int)qualtityTraditionalUser;
+            }
+            return list;
+        }
+        public void R1R4_FOR_NEW_USERS(Predict_DAO_MCol dao, RecommdationSchedule schedule, Dictionary<string, double> UCA)
         {
             List<Recommendation_Meta_Item> lrc_ForNewUsers = GetListR1R4_ForNewUsers(dao, UCA);
             // lrc_ForNewUsers = GetQuantityNewUsers(dao, lrc_ForNewUsers);
@@ -55,7 +238,7 @@ namespace rsrecommendation_lib
 
 
         #region R1 + R4 for New users MC
-        public List<Recommendation_Meta_Item> GetListR1R4_ForNewUsers(Predict_DAO_MC dao, Dictionary<string, double> UCA)
+        public List<Recommendation_Meta_Item> GetListR1R4_ForNewUsers(Predict_DAO_MCol dao, Dictionary<string, double> UCA)
         {
             double M = 1;
             if (UCA.ContainsKey("MEANS_VALUE"))
@@ -73,7 +256,7 @@ namespace rsrecommendation_lib
 
         public List<Recommendation_Meta_Item> GetRecommendations(string sql)
         {
-            Predict_DAO_MC a = new Predict_DAO_MC();
+            Predict_DAO_MCol a = new Predict_DAO_MCol();
             try
             {
                 a.beginTransaction();
@@ -90,7 +273,7 @@ namespace rsrecommendation_lib
 
         public List<ClusterInfo> GetListCluster()
         {
-            Predict_DAO_MC a = new Predict_DAO_MC();
+            Predict_DAO_MCol a = new Predict_DAO_MCol();
             List<ClusterInfo> list = new List<ClusterInfo>();
 
             try
@@ -140,7 +323,24 @@ namespace rsrecommendation_lib
         //Corrected by MC. NGUYEN, 22.10.2014
         //Changed: 24.10.2014: the formule to calculate SCORE for each Meta Produit (based on Count(*)).
         //----------------------------------------------------------------------------------------------
-        public List<Recommendation_Meta_Item> getListRecommendation_R1_TraditionalUsers(Predict_DAO_MC a, int nbR1)
+        public List<Recommendation_Meta_Item> getListRecommendation_R1_TraditionalUsers(Predict_DAO_MCol a)
+        {
+            List<Recommendation_Meta_Item> list1 = new List<Recommendation_Meta_Item>();
+            List<Recommendation_Meta_Item> list2 = new List<Recommendation_Meta_Item>();
+            List<string> list3 = new List<string>();
+            List<string> list4 = new List<string>();
+            foreach (string cluster in a.GetListClusterID())
+            {
+                foreach (string u in a.GetListUser_OfCluster(cluster))
+                {
+                    List<Recommendation_Meta_Item> forTraditionalUser = a.GetRecommendC6_ForTraditionalUser(u, 2);
+                    list1.AddRange((IEnumerable<Recommendation_Meta_Item>)forTraditionalUser);
+                }
+            }
+            return list1;
+        }
+
+        public List<Recommendation_Meta_Item> getListRecommendation_R1_TraditionalUsers(Predict_DAO_MCol a, int nbR1)
         {
             //Predict_DAO_MC a = new Predict_DAO_MC();
             List<Recommendation_Meta_Item> list = new List<Recommendation_Meta_Item>();
@@ -174,10 +374,8 @@ namespace rsrecommendation_lib
 
         //---------------------------------------------------------------------------------------------
         //This function call GetQualtityTraditionalUser to compute the quantity for each recommendations in the list
-        //Created by: MC. NGUYEN
-        //Corrected by: MC. NGUYEN 24.10.2014
         //---------------------------------------------------------------------------------------------
-        public List<Recommendation_Meta_Item> GetQuantityTraditionalUsers(Predict_DAO_MC a, List<Recommendation_Meta_Item> list, Dictionary<string, double> UCA)
+        public List<Recommendation_Meta_Item> GetQuantityTraditionalUsers(Predict_DAO_MCol a, List<Recommendation_Meta_Item> list, Dictionary<string, double> UCA)
         {
             Int32 QTY;
             double M = 1;
@@ -202,7 +400,7 @@ namespace rsrecommendation_lib
 
         }
 
-        public List<Recommendation_Meta_Item> GetQuantityNewUsers(Predict_DAO_MC a, List<Recommendation_Meta_Item> list)
+        public List<Recommendation_Meta_Item> GetQuantityNewUsers(Predict_DAO_MCol a, List<Recommendation_Meta_Item> list)
         {
             //Predict_DAO_MC a = new Predict_DAO_MC();
             //List<U_I_Q> Cate_Item_QTY = new List<U_I_Q>();
@@ -273,18 +471,16 @@ namespace rsrecommendation_lib
 
         //----------------------------------------------------------------------------------------------
         //This function gives R3 AND QUANTITY (with a number of recommendations for each user as input)
-        //Created by MC. NGUYEN
-        //Corrected by MC. NGUYEN, 22.10.2014.
         //----------------------------------------------------------------------------------------------
 
-        public List<Recommendation_Meta_Item> GetRecommendationR3(Predict_DAO_MC a, int nbR3)
+        public List<Recommendation_Meta_Item> GetRecommendationR3(Predict_DAO_MCol a, int nbR3)
         {
             List<Recommendation_Meta_Item> list = new List<Recommendation_Meta_Item>();
             //Content is cleared by M.C. Nguyen 19.9.2015
             return list;
         }
 
-        public List<Recommendation_Meta_Item> GetQuantityTraditionalUsersR3(Predict_DAO_MC a, List<Recommendation_Meta_Item> list, Dictionary<string, double> UCA)
+        public List<Recommendation_Meta_Item> GetQuantityTraditionalUsersR3(Predict_DAO_MCol a, List<Recommendation_Meta_Item> list, Dictionary<string, double> UCA)
         {
 
             double QTY;
@@ -320,7 +516,7 @@ namespace rsrecommendation_lib
 
         public void RemoveDuplicateR3R1()
         {
-            Predict_DAO_MC a = new Predict_DAO_MC();
+            Predict_DAO_MCol a = new Predict_DAO_MCol();
             try
             {
                 a.RemoveDuplicateR3R1();
@@ -343,7 +539,7 @@ namespace rsrecommendation_lib
         //Created by MC. NGUYEN
         //Corrected by MC. NGUYEN, 22.10.2014.
         //----------------------------------------------------------------------------------------------
-        public List<Recommendation_Meta_Item> GetRecommendationR4(Predict_DAO_MC a, double paramR4, Dictionary<string, double> UCA)
+        public List<Recommendation_Meta_Item> GetRecommendationR4(Predict_DAO_MCol a, double paramR4, Dictionary<string, double> UCA)
         {
 
             double M = 1;
@@ -365,7 +561,7 @@ namespace rsrecommendation_lib
         public double GetPrice(string MetaItemID, int QTY)
         {
             double Price = 0;
-            Predict_DAO_MC a = new Predict_DAO_MC();
+            Predict_DAO_MCol a = new Predict_DAO_MCol();
             try
             {
                 Price = a.GetPrice(MetaItemID, QTY);
@@ -381,7 +577,7 @@ namespace rsrecommendation_lib
         }
 
 
-        public Dictionary<string, double> getUCA(Predict_DAO_MC dao)
+        public Dictionary<string, double> getUCA(Predict_DAO_MCol dao)
         {
             Dictionary<string, double> lstUCA = new Dictionary<string, double>();
             try
@@ -431,7 +627,7 @@ namespace rsrecommendation_lib
 
 
 
-        public Settings GetRecommendationSeting(Predict_DAO_MC a)
+        public Settings GetRecommendationSeting(Predict_DAO_MCol a)
         {
             Settings st = new Settings();
 
@@ -493,7 +689,7 @@ namespace rsrecommendation_lib
 
         #endregion
 
-        public List<ADDGAP> GetListOfNewGAP(Predict_DAO_MC a)
+        public List<ADDGAP> GetListOfNewGAP(Predict_DAO_MCol a)
         {
             List<ADDGAP> lst = new List<ADDGAP>();
             try
@@ -510,7 +706,7 @@ namespace rsrecommendation_lib
 
 
 
-        public List<QTY_GAP> UpdateQTYGap(Predict_DAO_MC a, List<ADDGAP> list)
+        public List<QTY_GAP> UpdateQTYGap(Predict_DAO_MCol a, List<ADDGAP> list)
         {
             List<QTY_GAP> lst = new List<QTY_GAP>();
             try

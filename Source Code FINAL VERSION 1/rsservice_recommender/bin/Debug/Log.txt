@@ -84,3 +84,67 @@ The statement has been terminated.
 
 11/11/2015 18:42:23: String or binary data would be truncated.
 The statement has been terminated.
+
+
+12/11/2015 0:04:10: Invalid object name 'RS.Price_TBL'.
+Could not use view or function 'RS.GET_PRICE_FINAL' because of binding errors.
+
+
+12/11/2015 0:28:23: Cannot find the object "DISTANCE_MATRIX" because it does not exist or you do not have permissions.
+
+
+12/11/2015 0:36:40: The parameterized query '(@ClusterType nvarchar(3),@Algorithm nvarchar(4000),@Log nvarcha' expects the parameter '@Algorithm', which was not supplied.
+
+
+12/11/2015 0:48:33: The parameterized query '(@ClusterType nvarchar(3),@Algorithm nvarchar(4000),@Log nvarcha' expects the parameter '@Algorithm', which was not supplied.
+
+
+12/11/2015 8:27:47: The parameterized query '(@ClusterType nvarchar(3),@Algorithm nvarchar(4000),@Log nvarcha' expects the parameter '@Algorithm', which was not supplied.
+
+
+12/11/2015 8:44:02: Cannot find the object "DISTANCE_MATRIX" because it does not exist or you do not have permissions.
+
+
+12/11/2015 8:49:29: Invalid object name 'RS.DISTANCE_MATRIX'.
+
+
+12/11/2015 10:24:06: Invalid object name 'RS.PRICE_TBL'.
+
+
+16/11/2015 9:18:21: String or binary data would be truncated.
+The statement has been terminated.
+
+
+16/11/2015 9:19:25: String or binary data would be truncated.
+The statement has been terminated.
+
+
+16/11/2015 9:27:26: String or binary data would be truncated.
+The statement has been terminated.
+
+
+16/11/2015 9:29:18: String or binary data would be truncated.
+The statement has been terminated.
+
+
+16/11/2015 9:34:15: String or binary data would be truncated.
+The statement has been terminated.
+
+
+16/11/2015 10:12:51: String or binary data would be truncated.
+The statement has been terminated.
+
+
+16/11/2015 10:21:42: String or binary data would be truncated.
+The statement has been terminated.
+
+
+16/11/2015 10:39:44: Invalid column name 'Sell-to Customer No_'.
+
+
+16/11/2015 14:54:17: String or binary data would be truncated.
+The statement has been terminated.
+
+
+17/11/2015 7:27:37: String or binary data would be truncated.
+The statement has been terminated.

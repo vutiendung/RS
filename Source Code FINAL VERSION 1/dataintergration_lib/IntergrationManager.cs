@@ -11,11 +11,8 @@ namespace dataintergration_lib
 {
     public class IntergrationManager
     {
-
         public void execute()
         {
-
-
             DI_DAO dao = null;
             DISchedule schedule = new DISchedule();
             schedule.Log = string.Empty;
@@ -23,7 +20,8 @@ namespace dataintergration_lib
             {
                 dao = new DI_DAO();
                 dao.beginTransaction();
-               //dao.CLEAN_ALL_INPUT_DATA();
+                //modify
+                dao.CLEAN_ALL_INPUT_DATA();
 
                 List<DIDataSource> lstDataSource = dao.getDataSource();
                 foreach (DIDataSource source in lstDataSource)
@@ -87,7 +85,6 @@ namespace dataintergration_lib
                     }
                     schedule.Log += "===============================================\n";
                 }
-
                 dao.addSchedule(schedule);
                 dao.commitTransaction();
             }
@@ -153,9 +150,7 @@ namespace dataintergration_lib
             }
             return list;
         }
-
-
-
+        
         public List<DIDataSource> getDataSources()
         {
             DI_DAO dao = null;
@@ -194,7 +189,6 @@ namespace dataintergration_lib
                 dao.rollbackTransaction();
                 throw ex;
             }
-
         }
 
         public void removeDataSource(string DataID)

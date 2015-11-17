@@ -10,10 +10,7 @@ namespace rsdao_lib
 {
     public class Recommendation_DAO : BASE_DAO
     {
-        public Recommendation_DAO()
-            : base()
-        {
-        }
+        public Recommendation_DAO(): base() {}
 
         public List<Recommendation_Setting> getListRecommendationSetting()
         {

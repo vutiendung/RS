@@ -10,10 +10,7 @@ namespace rsdao_lib
 {
     public class Clustering_Users_DAO : Clustering_Base_DAO
     {
-        public Clustering_Users_DAO()
-            : base()
-        {
-        }
+        public Clustering_Users_DAO(): base(){}
 
         public void addPARTION_TBL(Partion item)
         {
@@ -49,7 +46,6 @@ namespace rsdao_lib
             executeNonQuery(strSelect);
         }
 
-        //Cuong add here
         public void CLEAN_ALL_INPUT_DATA()
         {
             string strSelect = "DELETE  [RS].[USER_TBL]";
@@ -114,7 +110,7 @@ namespace rsdao_lib
 
         //-----------------------------------------------------------------------------------------------
 
-        #region SONNT
+        #region NT
 
         public int[] getStaticsData()
         {

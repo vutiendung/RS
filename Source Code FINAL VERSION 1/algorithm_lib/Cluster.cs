@@ -464,7 +464,6 @@ namespace algorithm_lib
                     v[cluster][j] += x[i][j];
             }
 
-            //Cuong sua here
             for(int i=0; i<v.Length; i++)
             if(groupCount[i] !=0)
                 for (int j = 0; j < v[i].Length; ++j)

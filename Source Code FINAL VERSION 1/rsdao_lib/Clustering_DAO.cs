@@ -10,21 +10,17 @@ namespace rsdao_lib
 {
     public class Clustering_DAO : BASE_DAO
     {
-        public Clustering_DAO()
-            : base()
-        {
-
-        }
+        public Clustering_DAO(): base(){}
 
         public List<Clustering_Setting> getListClusteringSetting()
         {
             List<Clustering_Setting> lstClusteringSetting = new List<Clustering_Setting>();
             Dictionary<string, object> parameters = new Dictionary<string, object>();
-            SqlDataReader reader = executeReader("SELECT RS.CLUSTER_SETTING_TBL.[Key],RS.CLUSTER_SETTING_TBL.[DataType],RS.CLUSTER_SETTING_TBL.[Description] FROM RS.CLUSTER_SETTING_TBL,RS.DATATYPE_TBL WHERE RS.CLUSTER_SETTING_TBL.DataType = RS.DATATYPE_TBL.DataType  ", parameters);
+            SqlDataReader reader = executeReader("SELECT RS.CLUSTER_SETTING_TBL.[Keys],RS.CLUSTER_SETTING_TBL.[DataType],RS.CLUSTER_SETTING_TBL.[Description] FROM RS.CLUSTER_SETTING_TBL,RS.CLUSTER_SETTING_VALUE_TBL WHERE RS.CLUSTER_SETTING_TBL.Keys = RS.CLUSTER_SETTING_VALUE_TBL.Keys", parameters);
             while (reader.Read())
             {
                 Clustering_Setting cs = new Clustering_Setting();
-                cs.Key = reader.GetString(reader.GetOrdinal("Key"));
+                cs.Key = reader.GetString(reader.GetOrdinal("Keys"));
                 cs.DataType = reader.GetString(reader.GetOrdinal("DataType"));
                 cs.Description = reader.GetString(reader.GetOrdinal("Description"));
                 lstClusteringSetting.Add(cs);
@@ -38,11 +34,11 @@ namespace rsdao_lib
             List<Clustering_Setting> lstClusteringSetting = new List<Clustering_Setting>();
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@ClusterType", ClusterType + "%");
-            SqlDataReader reader = executeReader("SELECT RS.CLUSTER_SETTING_TBL.[Key],RS.CLUSTER_SETTING_TBL.[DataType],RS.CLUSTER_SETTING_TBL.[Description] FROM RS.CLUSTER_SETTING_TBL,RS.DATATYPE_TBL WHERE RS.CLUSTER_SETTING_TBL.DataType = RS.DATATYPE_TBL.DataType  and RS.CLUSTER_SETTING_TBL.[Key] like @ClusterType", parameters);
+            SqlDataReader reader = executeReader("SELECT RS.CLUSTER_SETTING_TBL.[Keys],RS.CLUSTER_SETTING_TBL.[DataType],RS.CLUSTER_SETTING_TBL.[Description] FROM RS.CLUSTER_SETTING_TBL,RS.CLUSTER_SETTING_VALUE_TBL WHERE RS.CLUSTER_SETTING_TBL.Keys = RS.CLUSTER_SETTING_VALUE_TBL.Keys and RS.CLUSTER_SETTING_TBL.[Keys] like @ClusterType", parameters);
             while (reader.Read())
             {
                 Clustering_Setting cs = new Clustering_Setting();
-                cs.Key = reader.GetString(reader.GetOrdinal("Key"));
+                cs.Key = reader.GetString(reader.GetOrdinal("Keys"));
                 cs.DataType = reader.GetString(reader.GetOrdinal("DataType"));
                 cs.Description = reader.GetString(reader.GetOrdinal("Description"));
                 lstClusteringSetting.Add(cs);
@@ -55,7 +51,7 @@ namespace rsdao_lib
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@Key", Key);
-            SqlDataReader reader = executeReader("SELECT ValueID,Value,isDefault FROM RS.CLUSTER_SETTING_VALUE_TBL WHERE [Key] = @Key ORDER BY isDefault DESC", parameters);
+            SqlDataReader reader = executeReader("SELECT ValueID,Value,isDefault FROM RS.CLUSTER_SETTING_VALUE_TBL WHERE [Keys] = @Key ORDER BY isDefault DESC", parameters);
             List<Cluster_Setting_Value> lstClusteringSettingValue = new List<Cluster_Setting_Value>();
             while (reader.Read())
             {

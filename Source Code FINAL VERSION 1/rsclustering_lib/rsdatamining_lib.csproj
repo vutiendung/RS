@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="algorithm_lib">
+      <HintPath>..\algorithm_lib\bin\Release\algorithm_lib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -47,10 +50,6 @@
     <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\algorithm_lib\rsml_lib.csproj">
-      <Project>{B85B159C-ED14-441D-82BC-01A7F809FC2C}</Project>
-      <Name>rsml_lib</Name>
-    </ProjectReference>
     <ProjectReference Include="..\rsbo_lib\rsbo_lib.csproj">
       <Project>{58959B9E-4488-4073-A7EF-7D3C543C80D7}</Project>
       <Name>rsbo_lib</Name>

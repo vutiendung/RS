@@ -18,8 +18,6 @@ namespace rsdao_lib
             //strConnectionString = ConfigurationManager.ConnectionStrings["RS_ConnectionString"].ConnectionString;
             strConnectionString = System.Configuration.ConfigurationManager.AppSettings["RS_ConnectionString"];
             connection = new SqlConnection(strConnectionString);
-
-            
         }
 
         protected void executeNonQuery(string sql, Dictionary<string, object> lstParams)
@@ -27,10 +25,10 @@ namespace rsdao_lib
             command.CommandText = sql;
             command.CommandTimeout = 1000;
             if (lstParams != null)
-            foreach (KeyValuePair<string, object> pair in lstParams)
-            {
-                command.Parameters.AddWithValue(pair.Key, pair.Value);
-            }
+                foreach (KeyValuePair<string, object> pair in lstParams)
+                {
+                    command.Parameters.AddWithValue(pair.Key, pair.Value);
+                }
             command.ExecuteNonQuery();
             command.Parameters.Clear();
         }
@@ -52,14 +50,14 @@ namespace rsdao_lib
 
         protected SqlDataReader executeReader(string sql, Dictionary<string, object> lstParams)
         {
-           // command = new SqlCommand();
+            // command = new SqlCommand();
             command.CommandText = sql;
             command.CommandTimeout = 1000;
             if (lstParams != null)
-            foreach (KeyValuePair<string, object> pair in lstParams)
-            {
-                command.Parameters.AddWithValue(pair.Key, pair.Value);
-            }
+                foreach (KeyValuePair<string, object> pair in lstParams)
+                {
+                    command.Parameters.AddWithValue(pair.Key, pair.Value);
+                }
             SqlDataReader reader = command.ExecuteReader();
             command.Parameters.Clear();
             return reader;
@@ -102,21 +100,21 @@ namespace rsdao_lib
 
         public void rollbackTransaction()
         {
-            try 
-	        {	        
-		        transaction.Rollback();
+            try
+            {
+                transaction.Rollback();
                 closeConnection();
-	        }
-	        catch (Exception){}
+            }
+            catch (Exception) { }
         }
 
-        #region  CHECK TABLE IS LOCKING OR NOT -SONNT
+        #region  CHECK TABLE IS LOCKING OR NOT -SNT
 
         public bool checkLockedTable(string TableName)
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@TableName", TableName);
-        string strSelect = "select COUNT(*) as lockNumber from sys.dm_tran_locks where resource_type = 'OBJECT' and resource_database_id = DB_ID()AND object_name(resource_associated_entity_id) = @TableName";
+            string strSelect = "select COUNT(*) as lockNumber from sys.dm_tran_locks where resource_type = 'OBJECT' and resource_database_id = DB_ID()AND object_name(resource_associated_entity_id) = @TableName";
             SqlDataReader dr = executeReader(strSelect, parameters);
             if (!dr.HasRows)
             {
@@ -124,17 +122,14 @@ namespace rsdao_lib
                 return true;
             }
             else
-            while (dr.Read())
-            {
-
-                int count = dr.GetInt32(dr.GetOrdinal("lockNumber"));
-                if (count > 0) { dr.Close();  return true; }
-            }
+                while (dr.Read())
+                {
+                    int count = dr.GetInt32(dr.GetOrdinal("lockNumber"));
+                    if (count > 0) { dr.Close(); return true; }
+                }
             dr.Close();
             return false;
         }
-
         #endregion
-
     }
 }
