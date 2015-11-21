@@ -148,3 +148,19 @@ The statement has been terminated.
 
 17/11/2015 7:27:37: String or binary data would be truncated.
 The statement has been terminated.
+
+
+19/11/2015 7:30:42: String or binary data would be truncated.
+The statement has been terminated.
+
+
+19/11/2015 7:42:24: Column 'U_SubCategoryID' does not belong to table .
+
+
+21/11/2015 11:20:18: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+
+
+21/11/2015 11:22:08: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+
+
+21/11/2015 11:23:25: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)

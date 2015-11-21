@@ -53,9 +53,18 @@ namespace rsdao_lib
 
         public List<Recommendation_Meta_Item> GetRecommendC6_ForTraditionalUser(string u, int k)
         {
-            string sql;
             List<Recommendation_Meta_Item> list = new List<Recommendation_Meta_Item>();
-            //Cong thuc tinh toan R1 tai day TraditionalUser
+            SqlDataReader sqlDataReader = this.executeReader("SELECT TOP " + (object)k + " A.MetaItemID, A.Q*dbo.CLUSTER_SCORE_C6.Q as SCORE FROM (SELECT ClusterID, MetaItemID, Q FROM dbo.ALL_TRANSACTION WHERE UserID = '" + u + "') AS A, dbo.CLUSTER_SCORE_C6 WHERE dbo.CLUSTER_SCORE_C6.MetaItemID = A.MetaItemID AND dbo.CLUSTER_SCORE_C6.Clusterid = A.ClusterID ORDER BY SCORE DESC");
+            while (sqlDataReader.Read())
+                list.Add(new Recommendation_Meta_Item()
+                {
+                    UserID = u,
+                    RecommendType = ConstantValues.RC_TYPE_LRS01,
+                    MetaItemID = sqlDataReader.GetString(sqlDataReader.GetOrdinal("MetaItemID")),
+                    Quantity = 0.0,
+                    Score = Convert.ToDouble(sqlDataReader[1])
+                });
+            sqlDataReader.Close();
             return list;
         }
 
